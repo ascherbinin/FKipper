@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93072667208B5EAD00043101 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93072666208B5EAD00043101 /* GoogleService-Info.plist */; };
+		9394996A206A75F4006D5D67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93949969206A75F4006D5D67 /* AppDelegate.swift */; };
+		9394996C206A75F4006D5D67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9394996B206A75F4006D5D67 /* ViewController.swift */; };
+		9394996F206A75F4006D5D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9394996D206A75F4006D5D67 /* Main.storyboard */; };
+		93949971206A75F4006D5D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93949970206A75F4006D5D67 /* Assets.xcassets */; };
+		93949974206A75F4006D5D67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93949972206A75F4006D5D67 /* LaunchScreen.storyboard */; };
+		FC9A8085AF87ECFE69156176 /* Pods_FKipper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319741F13E75B74B186B190 /* Pods_FKipper.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		90784703997F58CE36E42D32 /* Pods-FKipper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKipper.release.xcconfig"; path = "Pods/Target Support Files/Pods-FKipper/Pods-FKipper.release.xcconfig"; sourceTree = "<group>"; };
+		93072666208B5EAD00043101 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		93949966206A75F4006D5D67 /* FKipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FKipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93949969206A75F4006D5D67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9394996B206A75F4006D5D67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9394996E206A75F4006D5D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93949970206A75F4006D5D67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93949973206A75F4006D5D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93949975206A75F4006D5D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A319741F13E75B74B186B190 /* Pods_FKipper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FKipper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7D706053ABB190998F1E33 /* Pods-FKipper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKipper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FKipper/Pods-FKipper.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93949963206A75F4006D5D67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC9A8085AF87ECFE69156176 /* Pods_FKipper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1394ED96B2462C0F50A4E3C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A319741F13E75B74B186B190 /* Pods_FKipper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9394995D206A75F4006D5D67 = {
+			isa = PBXGroup;
+			children = (
+				93949968206A75F4006D5D67 /* FKipper */,
+				93949967206A75F4006D5D67 /* Products */,
+				A4B4CD70ADA2828E78587246 /* Pods */,
+				1394ED96B2462C0F50A4E3C0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		93949967206A75F4006D5D67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93949966206A75F4006D5D67 /* FKipper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93949968206A75F4006D5D67 /* FKipper */ = {
+			isa = PBXGroup;
+			children = (
+				93072666208B5EAD00043101 /* GoogleService-Info.plist */,
+				93949969206A75F4006D5D67 /* AppDelegate.swift */,
+				9394996B206A75F4006D5D67 /* ViewController.swift */,
+				9394996D206A75F4006D5D67 /* Main.storyboard */,
+				93949970206A75F4006D5D67 /* Assets.xcassets */,
+				93949972206A75F4006D5D67 /* LaunchScreen.storyboard */,
+				93949975206A75F4006D5D67 /* Info.plist */,
+			);
+			path = FKipper;
+			sourceTree = "<group>";
+		};
+		A4B4CD70ADA2828E78587246 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF7D706053ABB190998F1E33 /* Pods-FKipper.debug.xcconfig */,
+				90784703997F58CE36E42D32 /* Pods-FKipper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93949965206A75F4006D5D67 /* FKipper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93949978206A75F4006D5D67 /* Build configuration list for PBXNativeTarget "FKipper" */;
+			buildPhases = (
+				D026FCAA706E2FA711C38D0A /* [CP] Check Pods Manifest.lock */,
+				93949962206A75F4006D5D67 /* Sources */,
+				93949963206A75F4006D5D67 /* Frameworks */,
+				93949964206A75F4006D5D67 /* Resources */,
+				54C5E5EE2241D0D965C4B014 /* [CP] Embed Pods Frameworks */,
+				B1BF804B8B3962812846BE59 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FKipper;
+			productName = FKipper;
+			productReference = 93949966206A75F4006D5D67 /* FKipper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9394995E206A75F4006D5D67 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Scherbinin Andrey";
+				TargetAttributes = {
+					93949965206A75F4006D5D67 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 93949961206A75F4006D5D67 /* Build configuration list for PBXProject "FKipper" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9394995D206A75F4006D5D67;
+			productRefGroup = 93949967206A75F4006D5D67 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93949965206A75F4006D5D67 /* FKipper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93949964206A75F4006D5D67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93949974206A75F4006D5D67 /* LaunchScreen.storyboard in Resources */,
+				93072667208B5EAD00043101 /* GoogleService-Info.plist in Resources */,
+				93949971206A75F4006D5D67 /* Assets.xcassets in Resources */,
+				9394996F206A75F4006D5D67 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54C5E5EE2241D0D965C4B014 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FKipper/Pods-FKipper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FKipper/Pods-FKipper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1BF804B8B3962812846BE59 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FKipper/Pods-FKipper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D026FCAA706E2FA711C38D0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FKipper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93949962206A75F4006D5D67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9394996C206A75F4006D5D67 /* ViewController.swift in Sources */,
+				9394996A206A75F4006D5D67 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9394996D206A75F4006D5D67 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9394996E206A75F4006D5D67 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		93949972206A75F4006D5D67 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93949973206A75F4006D5D67 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93949976206A75F4006D5D67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		93949977206A75F4006D5D67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93949979206A75F4006D5D67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF7D706053ABB190998F1E33 /* Pods-FKipper.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8PCTL6TV7M;
+				INFOPLIST_FILE = FKipper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ascherbinin.FKipper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9394997A206A75F4006D5D67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90784703997F58CE36E42D32 /* Pods-FKipper.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8PCTL6TV7M;
+				INFOPLIST_FILE = FKipper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ascherbinin.FKipper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93949961206A75F4006D5D67 /* Build configuration list for PBXProject "FKipper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93949976206A75F4006D5D67 /* Debug */,
+				93949977206A75F4006D5D67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93949978206A75F4006D5D67 /* Build configuration list for PBXNativeTarget "FKipper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93949979206A75F4006D5D67 /* Debug */,
+				9394997A206A75F4006D5D67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9394995E206A75F4006D5D67 /* Project object */;
+}
