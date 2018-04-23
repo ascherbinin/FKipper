@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		93072667208B5EAD00043101 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93072666208B5EAD00043101 /* GoogleService-Info.plist */; };
+		93417FB9208DCB59006014A0 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FB7208DCB59006014A0 /* StoryboardInitializable.swift */; };
+		93417FBA208DCB59006014A0 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FB8208DCB59006014A0 /* BaseCoordinator.swift */; };
+		93417FC5208DD1B8006014A0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FC4208DD1B8006014A0 /* AppCoordinator.swift */; };
+		93417FCB208DE68F006014A0 /* RecipeSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FC7208DE68F006014A0 /* RecipeSearchViewModel.swift */; };
+		93417FCC208DE68F006014A0 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FC8208DE68F006014A0 /* RecipeTableViewCell.swift */; };
+		93417FCD208DE68F006014A0 /* RecipeSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FC9208DE68F006014A0 /* RecipeSearchCoordinator.swift */; };
+		93417FCE208DE68F006014A0 /* RecipeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FCA208DE68F006014A0 /* RecipeSearchViewController.swift */; };
 		9394996A206A75F4006D5D67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93949969206A75F4006D5D67 /* AppDelegate.swift */; };
-		9394996C206A75F4006D5D67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9394996B206A75F4006D5D67 /* ViewController.swift */; };
 		9394996F206A75F4006D5D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9394996D206A75F4006D5D67 /* Main.storyboard */; };
 		93949971206A75F4006D5D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93949970206A75F4006D5D67 /* Assets.xcassets */; };
 		93949974206A75F4006D5D67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93949972206A75F4006D5D67 /* LaunchScreen.storyboard */; };
@@ -19,9 +25,15 @@
 /* Begin PBXFileReference section */
 		90784703997F58CE36E42D32 /* Pods-FKipper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKipper.release.xcconfig"; path = "Pods/Target Support Files/Pods-FKipper/Pods-FKipper.release.xcconfig"; sourceTree = "<group>"; };
 		93072666208B5EAD00043101 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		93417FB7208DCB59006014A0 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
+		93417FB8208DCB59006014A0 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		93417FC4208DD1B8006014A0 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		93417FC7208DE68F006014A0 /* RecipeSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearchViewModel.swift; sourceTree = "<group>"; };
+		93417FC8208DE68F006014A0 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		93417FC9208DE68F006014A0 /* RecipeSearchCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearchCoordinator.swift; sourceTree = "<group>"; };
+		93417FCA208DE68F006014A0 /* RecipeSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearchViewController.swift; sourceTree = "<group>"; };
 		93949966206A75F4006D5D67 /* FKipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FKipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93949969206A75F4006D5D67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9394996B206A75F4006D5D67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9394996E206A75F4006D5D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93949970206A75F4006D5D67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93949973206A75F4006D5D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +62,67 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		93417FB6208DCB59006014A0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				93417FB7208DCB59006014A0 /* StoryboardInitializable.swift */,
+				93417FB8208DCB59006014A0 /* BaseCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		93417FBD208DCE78006014A0 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				93949975206A75F4006D5D67 /* Info.plist */,
+				93072666208B5EAD00043101 /* GoogleService-Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		93417FBE208DCE87006014A0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				93417FC6208DE68F006014A0 /* RecipeSearchViewController */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		93417FBF208DCEBD006014A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		93417FC0208DCEC5006014A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93417FC1208DCECD006014A0 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		93417FC1208DCECD006014A0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9394996D206A75F4006D5D67 /* Main.storyboard */,
+				93949972206A75F4006D5D67 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		93417FC6208DE68F006014A0 /* RecipeSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93417FC7208DE68F006014A0 /* RecipeSearchViewModel.swift */,
+				93417FC8208DE68F006014A0 /* RecipeTableViewCell.swift */,
+				93417FC9208DE68F006014A0 /* RecipeSearchCoordinator.swift */,
+				93417FCA208DE68F006014A0 /* RecipeSearchViewController.swift */,
+			);
+			path = RecipeSearchViewController;
+			sourceTree = "<group>";
+		};
 		9394995D206A75F4006D5D67 = {
 			isa = PBXGroup;
 			children = (
@@ -71,13 +144,14 @@
 		93949968206A75F4006D5D67 /* FKipper */ = {
 			isa = PBXGroup;
 			children = (
-				93072666208B5EAD00043101 /* GoogleService-Info.plist */,
+				93417FC0208DCEC5006014A0 /* Views */,
+				93417FBF208DCEBD006014A0 /* Models */,
+				93417FBE208DCE87006014A0 /* Presentation */,
+				93417FBD208DCE78006014A0 /* SupportingFiles */,
 				93949969206A75F4006D5D67 /* AppDelegate.swift */,
-				9394996B206A75F4006D5D67 /* ViewController.swift */,
-				9394996D206A75F4006D5D67 /* Main.storyboard */,
+				93417FC4208DD1B8006014A0 /* AppCoordinator.swift */,
 				93949970206A75F4006D5D67 /* Assets.xcassets */,
-				93949972206A75F4006D5D67 /* LaunchScreen.storyboard */,
-				93949975206A75F4006D5D67 /* Info.plist */,
+				93417FB6208DCB59006014A0 /* Base */,
 			);
 			path = FKipper;
 			sourceTree = "<group>";
@@ -171,12 +245,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FKipper/Pods-FKipper-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -225,8 +303,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9394996C206A75F4006D5D67 /* ViewController.swift in Sources */,
+				93417FCE208DE68F006014A0 /* RecipeSearchViewController.swift in Sources */,
+				93417FC5208DD1B8006014A0 /* AppCoordinator.swift in Sources */,
 				9394996A206A75F4006D5D67 /* AppDelegate.swift in Sources */,
+				93417FCD208DE68F006014A0 /* RecipeSearchCoordinator.swift in Sources */,
+				93417FB9208DCB59006014A0 /* StoryboardInitializable.swift in Sources */,
+				93417FCC208DE68F006014A0 /* RecipeTableViewCell.swift in Sources */,
+				93417FBA208DCB59006014A0 /* BaseCoordinator.swift in Sources */,
+				93417FCB208DE68F006014A0 /* RecipeSearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PCTL6TV7M;
-				INFOPLIST_FILE = FKipper/Info.plist;
+				INFOPLIST_FILE = FKipper/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ascherbinin.FKipper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -382,7 +466,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PCTL6TV7M;
-				INFOPLIST_FILE = FKipper/Info.plist;
+				INFOPLIST_FILE = FKipper/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ascherbinin.FKipper;
 				PRODUCT_NAME = "$(TARGET_NAME)";

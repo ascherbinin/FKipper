@@ -19,11 +19,16 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - RxCocoa (4.1.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.1)
   - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
   - Firebase/Core
-  - Toast-Swift (~> 3.0.1)
+  - RxCocoa
+  - RxSwift
+  - Toast-Swift
 
 SPEC CHECKSUMS:
   Firebase: 7d3b8cd837ad9fcd391657734c0d56dab8e9a5a3
@@ -32,8 +37,10 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  RxCocoa: fd0862fd2df95fa55562ad28ffd2522c25eb4a85
+  RxSwift: c6e3b1c7b325c7d121cd4327e9d98b7ed746b570
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: f1ef33ce472f200694a45b3e46663405208866c9
+PODFILE CHECKSUM: f08ec22bb2cc3f1033301ebce24804545d6871f4
 
 COCOAPODS: 1.4.0
