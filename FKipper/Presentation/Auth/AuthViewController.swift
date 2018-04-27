@@ -15,5 +15,15 @@ class AuthViewController: UIViewController, StoryboardInitializable {
     private let disposeBag = DisposeBag()
     
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        viewModel
+            .title
+            .asObservable()
+            .subscribe(onNext: {[weak self] title in
+                self?.title = title
+            }).disposed(by: disposeBag)
+    }
     
 }

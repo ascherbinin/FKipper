@@ -19,7 +19,7 @@ class AppCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
-        let spendingsCoordinator = SpendingsCoordinator(window: window)
-        return coordinate(to: spendingsCoordinator)
+        let authCoordinator = AuthCoordinator(window: window)
+        return coordinate(to: authCoordinator)
     }
 }

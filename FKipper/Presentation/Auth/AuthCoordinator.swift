@@ -18,7 +18,7 @@ class AuthCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
-        let viewModel = AuthViewModel() // Need title
+        let viewModel = AuthViewModel(title: "AuthTitle".localized()) // Need title
         let viewController = AuthViewController.initFromStoryboard(name: "Auth")
         let navigationController = UINavigationController(rootViewController: viewController)
         
