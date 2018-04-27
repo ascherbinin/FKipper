@@ -1,6 +1,6 @@
 //
 //  AppCoordinator.swift
-//  EatIT
+//                   
 //
 //  Created by Scherbinin Andrey on 26.01.2018.
 //  Copyright © 2018 Scherbinin Andrey. All rights reserved.
@@ -19,7 +19,7 @@ class AppCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
-        let recipeSearchCoordinator = RecipeSearchCoordinator(window: window)
-        return coordinate(to: recipeSearchCoordinator)
+        let spendingsCoordinator = SpendingsCoordinator(window: window)
+        return coordinate(to: spendingsCoordinator)
     }
 }

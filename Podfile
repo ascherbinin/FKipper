@@ -7,7 +7,9 @@ target 'FKipper' do
 
   # Pods for FKipper
   pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
   pod 'Toast-Swift'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxDataSources'
 end
