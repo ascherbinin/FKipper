@@ -28,8 +28,12 @@
 		93D67A58208DF10000C4DCD8 /* SpendingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A57208DF10000C4DCD8 /* SpendingsViewModel.swift */; };
 		93D67A5A208DF26600C4DCD8 /* Spend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A59208DF26600C4DCD8 /* Spend.swift */; };
 		93D67A5C208DF47200C4DCD8 /* LocalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A5B208DF47200C4DCD8 /* LocalCollection.swift */; };
+		93DAC442209465B0003894D5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC441209465B0003894D5 /* SignUpViewController.swift */; };
+		93DAC444209465C5003894D5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC443209465C5003894D5 /* SignUpViewModel.swift */; };
+		93DAC446209465D7003894D5 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC445209465D7003894D5 /* SignUpCoordinator.swift */; };
+		93DAC44820947A18003894D5 /* UUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC44720947A18003894D5 /* UUser.swift */; };
 		93EDCC54208DF82A0005D00F /* SpendingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCC53208DF82A0005D00F /* SpendingsTableViewCell.swift */; };
-		FC9A8085AF87ECFE69156176 /* Pods_FKipper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319741F13E75B74B186B190 /* Pods_FKipper.framework */; };
+		FC17B25D73E2A2FC55F7CDC2 /* libPods-FKipper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D1F602D40D8885379EF95 /* libPods-FKipper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,9 +64,15 @@
 		93D67A57208DF10000C4DCD8 /* SpendingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsViewModel.swift; sourceTree = "<group>"; };
 		93D67A59208DF26600C4DCD8 /* Spend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spend.swift; sourceTree = "<group>"; };
 		93D67A5B208DF47200C4DCD8 /* LocalCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalCollection.swift; sourceTree = "<group>"; };
+		93DAC441209465B0003894D5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		93DAC443209465C5003894D5 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		93DAC445209465D7003894D5 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		93DAC44720947A18003894D5 /* UUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUser.swift; sourceTree = "<group>"; };
+		93DAC449209481DB003894D5 /* FKipper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FKipper-Bridging-Header.h"; sourceTree = "<group>"; };
+		93DAC44C20949493003894D5 /* FKipper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FKipper.entitlements; sourceTree = "<group>"; };
 		93EDCC53208DF82A0005D00F /* SpendingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsTableViewCell.swift; sourceTree = "<group>"; };
-		A319741F13E75B74B186B190 /* Pods_FKipper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FKipper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7D706053ABB190998F1E33 /* Pods-FKipper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKipper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FKipper/Pods-FKipper.debug.xcconfig"; sourceTree = "<group>"; };
+		D69D1F602D40D8885379EF95 /* libPods-FKipper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FKipper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC9A8085AF87ECFE69156176 /* Pods_FKipper.framework in Frameworks */,
+				FC17B25D73E2A2FC55F7CDC2 /* libPods-FKipper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +90,7 @@
 		1394ED96B2462C0F50A4E3C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A319741F13E75B74B186B190 /* Pods_FKipper.framework */,
+				D69D1F602D40D8885379EF95 /* libPods-FKipper.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,6 +98,7 @@
 		9309E3982093421000DB273A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				93DAC44020946590003894D5 /* CheckIn */,
 				9309E3992093422E00DB273A /* AuthViewController.swift */,
 				9309E39B2093423D00DB273A /* AuthViewModel.swift */,
 				9309E39F209346B600DB273A /* AuthCoordinator.swift */,
@@ -116,6 +127,7 @@
 		93417FBD208DCE78006014A0 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				93DAC449209481DB003894D5 /* FKipper-Bridging-Header.h */,
 				935989D02091915B00C2026D /* Localizable.strings */,
 				93949975206A75F4006D5D67 /* Info.plist */,
 				93072666208B5EAD00043101 /* GoogleService-Info.plist */,
@@ -136,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				93D67A59208DF26600C4DCD8 /* Spend.swift */,
+				93DAC44720947A18003894D5 /* UUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +201,7 @@
 		93949968206A75F4006D5D67 /* FKipper */ = {
 			isa = PBXGroup;
 			children = (
+				93DAC44C20949493003894D5 /* FKipper.entitlements */,
 				935989C72090A4F100C2026D /* Extensions */,
 				932BFCDA209069150033522C /* Helpers */,
 				93417FC0208DCEC5006014A0 /* Views */,
@@ -213,6 +227,16 @@
 			path = Spendings;
 			sourceTree = "<group>";
 		};
+		93DAC44020946590003894D5 /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+				93DAC441209465B0003894D5 /* SignUpViewController.swift */,
+				93DAC443209465C5003894D5 /* SignUpViewModel.swift */,
+				93DAC445209465D7003894D5 /* SignUpCoordinator.swift */,
+			);
+			path = CheckIn;
+			sourceTree = "<group>";
+		};
 		A4B4CD70ADA2828E78587246 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,8 +257,7 @@
 				93949962206A75F4006D5D67 /* Sources */,
 				93949963206A75F4006D5D67 /* Frameworks */,
 				93949964206A75F4006D5D67 /* Resources */,
-				54C5E5EE2241D0D965C4B014 /* [CP] Embed Pods Frameworks */,
-				B1BF804B8B3962812846BE59 /* [CP] Copy Pods Resources */,
+				C724507A91B5496F82A9DE67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,7 +280,13 @@
 				TargetAttributes = {
 					93949965206A75F4006D5D67 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -297,59 +326,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		54C5E5EE2241D0D965C4B014 /* [CP] Embed Pods Frameworks */ = {
+		C724507A91B5496F82A9DE67 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FKipper/Pods-FKipper-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FKipper/Pods-FKipper-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B1BF804B8B3962812846BE59 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FKipper/Pods-FKipper-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC/gRPCCertificates.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -387,13 +375,17 @@
 				9394996A206A75F4006D5D67 /* AppDelegate.swift in Sources */,
 				93D67A56208DF0F600C4DCD8 /* SpendingsCoordinator.swift in Sources */,
 				9309E39C2093423D00DB273A /* AuthViewModel.swift in Sources */,
+				93DAC446209465D7003894D5 /* SignUpCoordinator.swift in Sources */,
 				9309E3A0209346B600DB273A /* AuthCoordinator.swift in Sources */,
+				93DAC44820947A18003894D5 /* UUser.swift in Sources */,
 				935989D32091921400C2026D /* NSLocalizedStringExtension.swift in Sources */,
+				93DAC444209465C5003894D5 /* SignUpViewModel.swift in Sources */,
 				935989C92090A4FE00C2026D /* DateExtensions.swift in Sources */,
 				93D67A54208DF0DA00C4DCD8 /* SpendingsViewController.swift in Sources */,
 				932BFCDC2090692E0033522C /* SpendingsSectionsHelper.swift in Sources */,
 				93D67A5A208DF26600C4DCD8 /* Spend.swift in Sources */,
 				9309E39A2093422E00DB273A /* AuthViewController.swift in Sources */,
+				93DAC442209465B0003894D5 /* SignUpViewController.swift in Sources */,
 				93417FB9208DCB59006014A0 /* StoryboardInitializable.swift in Sources */,
 				93417FBA208DCB59006014A0 /* BaseCoordinator.swift in Sources */,
 				93D67A58208DF10000C4DCD8 /* SpendingsViewModel.swift in Sources */,
@@ -547,12 +539,16 @@
 			baseConfigurationReference = AF7D706053ABB190998F1E33 /* Pods-FKipper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FKipper/FKipper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PCTL6TV7M;
 				INFOPLIST_FILE = FKipper/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ascherbinin.FKipper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FKipper/SupportingFiles/FKipper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -563,12 +559,15 @@
 			baseConfigurationReference = 90784703997F58CE36E42D32 /* Pods-FKipper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FKipper/FKipper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PCTL6TV7M;
 				INFOPLIST_FILE = FKipper/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ascherbinin.FKipper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FKipper/SupportingFiles/FKipper-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

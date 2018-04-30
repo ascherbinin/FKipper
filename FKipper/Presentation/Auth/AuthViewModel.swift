@@ -12,6 +12,11 @@ import RxSwift
 class AuthViewModel {
     
     let title: Observable<String>
+    let showSignUp: AnyObserver<Void>
+    let showSignUpViewController: Observable<Void>
+    
+    let emailField = Variable<String>("")
+    let pwdField = Variable<String>("")
     
     init(title: String) {
         
@@ -22,5 +27,9 @@ class AuthViewModel {
 //        self.selectedSpend = _selectSpend.asObservable().map{$0.spend}
 //        
 //        query = baseQuery()
+        
+        let _showSignUp = PublishSubject<Void>()
+        self.showSignUp = _showSignUp.asObserver()
+        self.showSignUpViewController = _showSignUp.asObservable()
     }
 }

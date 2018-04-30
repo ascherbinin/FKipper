@@ -1,4 +1,4 @@
-framework module Pods_FKipper {
+module Pods_FKipper [system] {
   umbrella header "Pods-FKipper-umbrella.h"
 
   export *
