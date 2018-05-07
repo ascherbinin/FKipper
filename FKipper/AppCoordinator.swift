@@ -19,7 +19,7 @@ class AppCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
-        let authCoordinator = AuthCoordinator(window: window)
+        let authCoordinator = SignInCoordinator(window: window)
         return coordinate(to: authCoordinator)
     }
 }

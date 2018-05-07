@@ -1,5 +1,5 @@
 //
-//  AuthCoordinator.swift
+//  SignInCoordinator.swift
 //  FKipper
 //
 //  Created by Scherbinin Andrey on 27.04.2018.
@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class AuthCoordinator: BaseCoordinator<Void> {
+class SignInCoordinator: BaseCoordinator<Void> {
     
     private let window: UIWindow
 
@@ -18,26 +18,31 @@ class AuthCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
-        let viewModel = AuthViewModel(title: "AuthTitle".localized()) // Need title
-        let viewController = AuthViewController.initFromStoryboard(name: "Auth")
+        let viewModel = SignInViewModel(title: "SignInTitle".localized()) // Need title
+        let viewController = SignInViewController.initFromStoryboard(name: "Auth")
         let navigationController = UINavigationController(rootViewController: viewController)
         
         viewController.viewModel = viewModel
         
-        viewModel.showSignUpViewController
+        viewModel
+            .showSignUpViewController
             .flatMap { [weak self] _ -> Observable<UUser?> in
                 guard let `self` = self else { return .empty() }
                 
                 return self.showSignUpViewController(on: viewController)
             }.subscribe(onNext:{ user in
-                print(user?.email ?? "Empty")
+                if user != nil {
+                    self.showSpendingsViewController(on: self.window)
+                }
             })
-            // Ignore nil results which means that Language List screen was dismissed by cancel button.
-//            .filter { $0 != nil }
-//            .map { $0! }
-            // Bind selected language to the `setCurrentLanguage` observer of the View Model
-//            .bind(to: viewModel.c)
             .disposed(by: disposeBag)
+        
+        viewModel
+            .showSpendingsViewController
+            .subscribe(onNext: { [weak self] _ in
+            guard let `self` = self else { return }
+            self.showSpendingsViewController(on: self.window)
+        }).disposed(by: disposeBag)
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
@@ -54,5 +59,10 @@ class AuthCoordinator: BaseCoordinator<Void> {
                 case .cancel: return nil
                 }
         }
+    }
+    
+    private func showSpendingsViewController(on window: UIWindow) {
+        let spendingsCoordinator = SpendingsCoordinator(window: window)
+        _ = coordinate(to: spendingsCoordinator)
     }
 }

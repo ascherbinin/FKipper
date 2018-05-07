@@ -20,6 +20,9 @@ class SignUpViewModel {
     let didSuccessSignUp: Observable<UUser>
     let didCancel: Observable<Void>
 
+    
+    let emailField = EmailFieldViewModel()
+    let passwordField = PasswordFieldViewModel()
     private let disposeBag = DisposeBag()
     
     let title: Observable<String>
@@ -49,10 +52,11 @@ class SignUpViewModel {
     }
     
     private func createUser () {
-        let email = "Test@mail.ru"
-        let pwd = "pwd123"
+//        let email = "Test@mail.ru"
+//        let pwd = "pwd123"
 
-        Auth.auth().createUser(withEmail: email, password: pwd) { (user, error) in
+        Auth.auth().createUser(withEmail: emailField.value.value,
+                               password: passwordField.value.value) { (user, error) in
             if error == nil {
                 let user = UUser(authData: user!)
                 print(user.name ?? "NO NAME")

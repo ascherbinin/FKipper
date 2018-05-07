@@ -13,6 +13,8 @@ import FirebaseFirestore
 
 class SpendingsViewModel {
 
+    let exit: AnyObserver<Void>
+    let didExit: Observable<Void>
     let selectedSpend: Observable<Spend>
     let selectSpend: AnyObserver<SpendViewModel>
     let showActivity = PublishSubject<Bool>()
@@ -92,8 +94,13 @@ class SpendingsViewModel {
         let _selectSpend = PublishSubject<SpendViewModel>()
         self.selectSpend = _selectSpend.asObserver()
         self.selectedSpend = _selectSpend.asObservable().map{$0.spend}
-     
+
+        let _exit = PublishSubject<Void>()
+        self.exit = _exit.asObserver()
+        self.didExit = _exit.asObservable()
+        
         query = baseQuery()
+        
     }
     
 }

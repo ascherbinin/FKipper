@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		93072667208B5EAD00043101 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93072666208B5EAD00043101 /* GoogleService-Info.plist */; };
-		9309E39A2093422E00DB273A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309E3992093422E00DB273A /* AuthViewController.swift */; };
-		9309E39C2093423D00DB273A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309E39B2093423D00DB273A /* AuthViewModel.swift */; };
+		9309E39A2093422E00DB273A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309E3992093422E00DB273A /* SignInViewController.swift */; };
+		9309E39C2093423D00DB273A /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309E39B2093423D00DB273A /* SignInViewModel.swift */; };
 		9309E39E209342E900DB273A /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9309E39D209342E900DB273A /* Auth.storyboard */; };
-		9309E3A0209346B600DB273A /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309E39F209346B600DB273A /* AuthCoordinator.swift */; };
+		9309E3A0209346B600DB273A /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309E39F209346B600DB273A /* SignInCoordinator.swift */; };
+		9310496020971F30003DCD57 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9310495F20971F30003DCD57 /* LoginModel.swift */; };
+		9310496220971FBF003DCD57 /* FieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9310496120971FBF003DCD57 /* FieldViewModel.swift */; };
 		932BFCDC2090692E0033522C /* SpendingsSectionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932BFCDB2090692E0033522C /* SpendingsSectionsHelper.swift */; };
 		93417FB9208DCB59006014A0 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FB7208DCB59006014A0 /* StoryboardInitializable.swift */; };
 		93417FBA208DCB59006014A0 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FB8208DCB59006014A0 /* BaseCoordinator.swift */; };
@@ -39,10 +41,12 @@
 /* Begin PBXFileReference section */
 		90784703997F58CE36E42D32 /* Pods-FKipper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKipper.release.xcconfig"; path = "Pods/Target Support Files/Pods-FKipper/Pods-FKipper.release.xcconfig"; sourceTree = "<group>"; };
 		93072666208B5EAD00043101 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9309E3992093422E00DB273A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		9309E39B2093423D00DB273A /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		9309E3992093422E00DB273A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		9309E39B2093423D00DB273A /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		9309E39D209342E900DB273A /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
-		9309E39F209346B600DB273A /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		9309E39F209346B600DB273A /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		9310495F20971F30003DCD57 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		9310496120971FBF003DCD57 /* FieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewModel.swift; sourceTree = "<group>"; };
 		932BFCDB2090692E0033522C /* SpendingsSectionsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsSectionsHelper.swift; sourceTree = "<group>"; };
 		93417FB7208DCB59006014A0 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 		93417FB8208DCB59006014A0 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
@@ -98,18 +102,27 @@
 		9309E3982093421000DB273A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				93DAC44020946590003894D5 /* CheckIn */,
-				9309E3992093422E00DB273A /* AuthViewController.swift */,
-				9309E39B2093423D00DB273A /* AuthViewModel.swift */,
-				9309E39F209346B600DB273A /* AuthCoordinator.swift */,
+				93DAC44020946590003894D5 /* SignUp */,
+				9309E3992093422E00DB273A /* SignInViewController.swift */,
+				9309E39B2093423D00DB273A /* SignInViewModel.swift */,
+				9309E39F209346B600DB273A /* SignInCoordinator.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		9310495E20971F0F003DCD57 /* ScreensModels */ = {
+			isa = PBXGroup;
+			children = (
+				9310495F20971F30003DCD57 /* LoginModel.swift */,
+			);
+			path = ScreensModels;
 			sourceTree = "<group>";
 		};
 		932BFCDA209069150033522C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				932BFCDB2090692E0033522C /* SpendingsSectionsHelper.swift */,
+				9310496120971FBF003DCD57 /* FieldViewModel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -147,6 +160,7 @@
 		93417FBF208DCEBD006014A0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9310495E20971F0F003DCD57 /* ScreensModels */,
 				93D67A59208DF26600C4DCD8 /* Spend.swift */,
 				93DAC44720947A18003894D5 /* UUser.swift */,
 			);
@@ -227,14 +241,14 @@
 			path = Spendings;
 			sourceTree = "<group>";
 		};
-		93DAC44020946590003894D5 /* CheckIn */ = {
+		93DAC44020946590003894D5 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
 				93DAC441209465B0003894D5 /* SignUpViewController.swift */,
 				93DAC443209465C5003894D5 /* SignUpViewModel.swift */,
 				93DAC445209465D7003894D5 /* SignUpCoordinator.swift */,
 			);
-			path = CheckIn;
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		A4B4CD70ADA2828E78587246 /* Pods */ = {
@@ -370,13 +384,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				93417FC5208DD1B8006014A0 /* AppCoordinator.swift in Sources */,
+				9310496020971F30003DCD57 /* LoginModel.swift in Sources */,
 				93D67A5C208DF47200C4DCD8 /* LocalCollection.swift in Sources */,
 				93EDCC54208DF82A0005D00F /* SpendingsTableViewCell.swift in Sources */,
 				9394996A206A75F4006D5D67 /* AppDelegate.swift in Sources */,
 				93D67A56208DF0F600C4DCD8 /* SpendingsCoordinator.swift in Sources */,
-				9309E39C2093423D00DB273A /* AuthViewModel.swift in Sources */,
+				9309E39C2093423D00DB273A /* SignInViewModel.swift in Sources */,
 				93DAC446209465D7003894D5 /* SignUpCoordinator.swift in Sources */,
-				9309E3A0209346B600DB273A /* AuthCoordinator.swift in Sources */,
+				9309E3A0209346B600DB273A /* SignInCoordinator.swift in Sources */,
+				9310496220971FBF003DCD57 /* FieldViewModel.swift in Sources */,
 				93DAC44820947A18003894D5 /* UUser.swift in Sources */,
 				935989D32091921400C2026D /* NSLocalizedStringExtension.swift in Sources */,
 				93DAC444209465C5003894D5 /* SignUpViewModel.swift in Sources */,
@@ -384,7 +400,7 @@
 				93D67A54208DF0DA00C4DCD8 /* SpendingsViewController.swift in Sources */,
 				932BFCDC2090692E0033522C /* SpendingsSectionsHelper.swift in Sources */,
 				93D67A5A208DF26600C4DCD8 /* Spend.swift in Sources */,
-				9309E39A2093422E00DB273A /* AuthViewController.swift in Sources */,
+				9309E39A2093422E00DB273A /* SignInViewController.swift in Sources */,
 				93DAC442209465B0003894D5 /* SignUpViewController.swift in Sources */,
 				93417FB9208DCB59006014A0 /* StoryboardInitializable.swift in Sources */,
 				93417FBA208DCB59006014A0 /* BaseCoordinator.swift in Sources */,

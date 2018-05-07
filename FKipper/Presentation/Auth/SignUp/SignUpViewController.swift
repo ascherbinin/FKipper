@@ -59,6 +59,10 @@ class SignUpViewController: UIViewController, StoryboardInitializable {
             .bind(to: viewModel.didTapSignUp)
             .disposed(by: disposeBag)
         
+        
+        tfEmail.rx.text.orEmpty.bind(to: viewModel.emailField.value).disposed(by: disposeBag)
+        tfPwd.rx.text.orEmpty.bind(to: viewModel.passwordField.value).disposed(by: disposeBag)
+        
     }
 }
 

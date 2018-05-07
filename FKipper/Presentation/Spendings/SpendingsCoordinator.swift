@@ -27,6 +27,11 @@ class SpendingsCoordinator: BaseCoordinator<Void> {
                 self?.showSpend(in: navigationController, by: spend) })
             .disposed(by: disposeBag)
         
+        viewModel.didExit
+            .subscribe(onNext: { [weak self] _ in
+            self?.showAuth(on: self?.window)
+        }).disposed(by: disposeBag)
+        
         //        viewModel.
         //            .flatMap { [weak self] _ -> Observable<String?> in
         //                guard let `self` = self else { return .empty() }
@@ -37,6 +42,7 @@ class SpendingsCoordinator: BaseCoordinator<Void> {
         //            .bind(to: viewModel.setCurrentLanguage)
         //            .disposed(by: disposeBag)
         //
+        
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
@@ -45,6 +51,12 @@ class SpendingsCoordinator: BaseCoordinator<Void> {
     
     private func showSpend(in navigationController: UINavigationController, by spend: Spend) {
        print("\(spend.title)")
+    }
+    
+    private func showAuth(on window: UIWindow?) {
+        guard let window = window else { return }
+        let appCoordinator = AppCoordinator(window: window)
+        _ = coordinate(to: appCoordinator)
     }
     
     //    private func showLanguageList(on rootViewController: UIViewController) -> Observable<String?> {

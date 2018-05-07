@@ -22,11 +22,14 @@ class SpendingsViewController: UIViewController, StoryboardInitializable, UITabl
     
     let dataSource: RxTableViewSectionedAnimatedDataSource<SectionOfSpends> = SpendingsViewController.dataSource()
     
-
+    private let exitButton = UIBarButtonItem(barButtonSystemItem: .action , target: nil, action: nil)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bindSpendsWithTableView()
+        
+        navigationItem.leftBarButtonItem = exitButton
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 66
@@ -57,6 +60,10 @@ class SpendingsViewController: UIViewController, StoryboardInitializable, UITabl
                 self?.view.hideToastActivity()
             }
         }).disposed(by: disposeBag)
+        
+        exitButton.rx.tap.debug("====TAP")
+            .bind(to: viewModel.exit)
+            .disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,18 +75,8 @@ class SpendingsViewController: UIViewController, StoryboardInitializable, UITabl
         viewModel.sections.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-//        viewModel.spends.asObservable()
-//            .bind(to: tableView.rx.items(cellIdentifier: SpendingsTableViewCell.reuseIdentificator,
-//                                         cellType: SpendingsTableViewCell.self)) { [weak self] row, model, cell in
-//                                            self?.setupSpendingCell(cell, model: model)
-//            }.disposed(by: disposeBag)
     }
-//
-//    private func setupSpendingCell(_ cell: SpendingsTableViewCell,
-//                                   model: SpendViewModel) {
-//
-//    }
-
+    
 }
 
 extension SpendingsViewController {
