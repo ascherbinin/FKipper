@@ -13,6 +13,7 @@ import Toast_Swift
 
 class SignInViewController: UIViewController, StoryboardInitializable {
     
+    @IBOutlet weak var logoView: UILabel!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var textFieldPassword: UITextField!
@@ -23,12 +24,22 @@ class SignInViewController: UIViewController, StoryboardInitializable {
     
     var viewModel: SignInViewModel!
     private let disposeBag = DisposeBag()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureBindings()
+        
+        self.view.applyGradient(colours: [UIColor.darkBlueColor, UIColor.lightBlueColor],
+                                locations: [0.2, 0.7],
+                                direction: GradientPoint.bottomTop.draw())
+
+        btnLogin.applyGradient(colours: [UIColor.lightGray, UIColor.clear],
+                               locations: [0.3, 0.6],
+                               direction: GradientPoint.topBottom.draw(),  withAlpha: 0.1)
+ 
+//        btnLogin.setTitleColor(UIColor.white, for: .disabled)
+//        btnLogin.setTitleColor(UIColor.darkGray, for: .normal)
     }
     
     
@@ -46,6 +57,10 @@ class SignInViewController: UIViewController, StoryboardInitializable {
         textFieldEmail.rx.text.orEmpty.bind(to: viewModel.emailField.value).disposed(by: disposeBag)
         textFieldPassword.rx.text.orEmpty.bind(to: viewModel.passwordField.value).disposed(by: disposeBag)
         
+        textFieldEmail.rx.controlEvent(UIControlEvents.editingDidEnd).subscribe(onNext: { [weak self] _ in
+            self?.textFieldPassword.becomeFirstResponder()
+        }).disposed(by: disposeBag)
+        
         viewModel
             .title
             .asObservable()
@@ -57,9 +72,12 @@ class SignInViewController: UIViewController, StoryboardInitializable {
             .bind(to: viewModel.showSignUp)
             .disposed(by: disposeBag)
         
-//        viewModel.isValid.map { $0 }
-//            .bind(to: btnLogin.rx.isEnabled)
-//            .disposed(by: disposeBag)
+        viewModel.isValid
+            .asObservable()
+            .subscribe(onNext: {[weak self] isValid in
+                self?.btnLogin.changeState(isEnabled: isValid)
+            })
+            .disposed(by: disposeBag)
         
         btnLogin.rx.tap
             .do(onNext:  { [unowned self] in

@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignInViewModel.swift"
-            timestampString = "547372769.86059"
+            timestampString = "547463052.452648"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "signin()"
             landmarkType = "7">
          </BreakpointContent>
@@ -282,43 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignInViewController.swift"
-            timestampString = "547370459.760781"
+            timestampString = "547463052.4527529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "configureBindings()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FKipper/Presentation/Auth/SignInViewModel.swift"
-            timestampString = "547372769.860669"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "signin()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FKipper/Presentation/Auth/SignInViewController.swift"
-            timestampString = "547370459.760939"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "configureBindings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -330,11 +298,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignInViewController.swift"
-            timestampString = "547370459.760987"
+            timestampString = "547463052.453351"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "configureBindings()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FKipper/Presentation/Auth/SignInViewController.swift"
+            timestampString = "547463052.453701"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "configureBindings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -346,7 +330,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Helpers/FieldViewModel.swift"
-            timestampString = "547363341.246819"
+            timestampString = "547458283.351101"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
@@ -362,7 +346,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Helpers/FieldViewModel.swift"
-            timestampString = "547363341.246866"
+            timestampString = "547458283.3511519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -378,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignInViewController.swift"
-            timestampString = "547370459.76108"
+            timestampString = "547463052.45408"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "configureBindings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -442,7 +426,7 @@
                   moduleName = "FKipper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ascherbinin/Documents/Projects/FKipper/FKipper/Presentation/Auth/SignInCoordinator.swift"
-                  timestampString = "547372770.167316"
+                  timestampString = "547454006.627748"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "58"
@@ -457,7 +441,7 @@
                   moduleName = "FKipper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ascherbinin/Documents/Projects/FKipper/FKipper/Presentation/Auth/SignInCoordinator.swift"
-                  timestampString = "547372770.169423"
+                  timestampString = "547454006.629478"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "58"
@@ -598,7 +582,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignInCoordinator.swift"
@@ -611,14 +595,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "FKipper.SignInCoordinator.start() -&gt; RxSwift.Observable&lt;()&gt;"
                   moduleName = "FKipper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ascherbinin/Documents/Projects/FKipper/FKipper/Presentation/Auth/SignInCoordinator.swift"
-                  timestampString = "547372770.2046649"
+                  timestampString = "547444667.539395"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -626,14 +610,14 @@
                   offsetFromSymbolStart = "1986">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #3 (()) -&gt; () in FKipper.SignInCoordinator.start() -&gt; RxSwift.Observable&lt;()&gt;"
                   moduleName = "FKipper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ascherbinin/Documents/Projects/FKipper/FKipper/Presentation/Auth/SignInCoordinator.swift"
-                  timestampString = "547372770.206512"
+                  timestampString = "547444667.54107"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"

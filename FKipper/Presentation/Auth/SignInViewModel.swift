@@ -17,6 +17,8 @@ class SignInViewModel {
     let showSignUpViewController: Observable<Void>
     let showSpendingsViewController: Observable<Void>
     
+    let isValid = Variable<Bool>(false)
+    
     let emailField = EmailFieldViewModel()
     let passwordField = PasswordFieldViewModel()
     var errorMessage = Variable<String?>(nil)
@@ -47,6 +49,13 @@ class SignInViewModel {
         let _showSpendings = PublishSubject<Void>()
         self.showSpendings = _showSpendings.asObserver()
         self.showSpendingsViewController = _showSpendings.asObservable()
+        
+        
+        Observable.combineLatest(emailField.value.asObservable(),
+                                 passwordField.value.asObservable())
+            .map {!$0.0.isEmpty && !$0.1.isEmpty}
+            .bind(to: isValid)
+            .disposed(by: disposeBag)
         
     }
     
