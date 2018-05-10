@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignInViewModel.swift"
-            timestampString = "547463052.452648"
+            timestampString = "547626252.406409"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -282,13 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignInViewController.swift"
-            timestampString = "547463052.4527529"
+            timestampString = "547630312.57064"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "configureBindings()"
-            landmarkType = "7">
+            startingLineNumber = "111"
+            endingLineNumber = "111">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -298,13 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignInViewController.swift"
-            timestampString = "547463052.453351"
+            timestampString = "547630312.570722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "configureBindings()"
-            landmarkType = "7">
+            startingLineNumber = "111"
+            endingLineNumber = "111">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -314,13 +310,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignInViewController.swift"
-            timestampString = "547463052.453701"
+            timestampString = "547630312.5707901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "configureBindings()"
-            landmarkType = "7">
+            startingLineNumber = "111"
+            endingLineNumber = "111">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -362,93 +356,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignInViewController.swift"
-            timestampString = "547463052.45408"
+            timestampString = "547630312.570886"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "configureBindings()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FKipper/Presentation/Auth/SignInCoordinator.swift"
-            timestampString = "547372769.860804"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "start()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FKipper/Presentation/Auth/SignInCoordinator.swift"
-            timestampString = "547372769.8608609"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "showSignUpViewController(on:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FKipper/Presentation/Auth/SignInCoordinator.swift"
-            timestampString = "547372769.860913"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "showSignUpViewController(on:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (FKipper.SignUpCoordinatorResult) -&gt; Swift.Optional&lt;FKipper.UUser&gt; in FKipper.SignInCoordinator.(showSignUpViewController in _825125D05BF60D6FD9AAA7E7F780F75E)(on: __ObjC.UIViewController) -&gt; RxSwift.Observable&lt;Swift.Optional&lt;FKipper.UUser&gt;&gt;"
-                  moduleName = "FKipper"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ascherbinin/Documents/Projects/FKipper/FKipper/Presentation/Auth/SignInCoordinator.swift"
-                  timestampString = "547454006.627748"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "53">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (FKipper.SignUpCoordinatorResult) -&gt; Swift.Optional&lt;FKipper.UUser&gt; in FKipper.SignInCoordinator.(showSignUpViewController in _825125D05BF60D6FD9AAA7E7F780F75E)(on: __ObjC.UIViewController) -&gt; RxSwift.Observable&lt;Swift.Optional&lt;FKipper.UUser&gt;&gt;"
-                  moduleName = "FKipper"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ascherbinin/Documents/Projects/FKipper/FKipper/Presentation/Auth/SignInCoordinator.swift"
-                  timestampString = "547454006.629478"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "93">
-               </Location>
-            </Locations>
+            startingLineNumber = "111"
+            endingLineNumber = "111">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -458,11 +370,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignUp/SignUpViewModel.swift"
-            timestampString = "547372769.860965"
+            timestampString = "547630312.570955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "init(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -474,7 +386,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignUp/SignUpViewModel.swift"
-            timestampString = "547372769.861008"
+            timestampString = "547630312.571026"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -490,11 +402,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Auth/SignUp/SignUpViewModel.swift"
-            timestampString = "547372769.861048"
+            timestampString = "547630312.5710911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "createUser()"
             landmarkType = "7">
          </BreakpointContent>
@@ -506,23 +418,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Spendings/SpendingsCoordinator.swift"
-            timestampString = "547372769.861091"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "start()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FKipper/Presentation/Spendings/SpendingsCoordinator.swift"
-            timestampString = "547372769.861462"
+            timestampString = "547630312.571157"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -538,11 +434,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Spendings/SpendingsCoordinator.swift"
-            timestampString = "547372769.861715"
+            timestampString = "547630312.571517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "showSpend(in:by:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -553,24 +449,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FKipper/Presentation/Auth/SignInCoordinator.swift"
-            timestampString = "547372769.8619649"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "showSpendingsViewController(on:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Spendings/SpendingsCoordinator.swift"
-            timestampString = "547372769.862018"
+            timestampString = "547630312.5717911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -630,16 +510,96 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FKipper/Presentation/Auth/SignUp/SignUpCoordinator.swift"
+            timestampString = "547630312.572081"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "start()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FKipper/Presentation/Auth/SignInViewController.swift"
+            timestampString = "547630312.572144"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "animationController(forPresented:presenting:source:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FKipper/Presentation/Auth/SignInCoordinator.swift"
-            timestampString = "547372769.86229"
+            filePath = "FKipper/Presentation/Auth/SignUp/SignUpViewModel.swift"
+            timestampString = "547630312.572202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "showSpendingsViewController(on:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "createUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FKipper/Presentation/Auth/SignInViewModel.swift"
+            timestampString = "547626252.40714"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "signin()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FKipper/Presentation/Auth/SignUp/SignUpViewModel.swift"
+            timestampString = "547630312.572291"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "createUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FKipper/Presentation/Auth/SignUp/SignUpViewModel.swift"
+            timestampString = "547630312.57235"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "createUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

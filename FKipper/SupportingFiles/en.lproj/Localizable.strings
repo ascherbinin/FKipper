@@ -15,3 +15,10 @@
 
 "Today" = "Today";
 "Yesterday" = "Yesterday";
+
+// Auth
+
+"Login" = "Login";
+"SignUp" = "Sign Up";
+"Cancel" = "Cancel";
+"NewAccountQuestion" = "Don't have an account? ";

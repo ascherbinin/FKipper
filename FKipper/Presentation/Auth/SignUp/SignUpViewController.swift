@@ -11,12 +11,9 @@ import UIKit
 import RxSwift
 
 class SignUpViewController: UIViewController, StoryboardInitializable {
-    @IBOutlet weak var lblEmail: UILabel!
-    @IBOutlet weak var tfEmail: UITextField!
-    @IBOutlet weak var lblPwd: UILabel!
-    @IBOutlet weak var tfPwd: UITextField!
-    @IBOutlet weak var lblUsername: UILabel!
-    @IBOutlet weak var tfUsername: UITextField!
+    @IBOutlet weak var textFieldEmail: UITextField!
+    @IBOutlet weak var textFieldPassword: UITextField!
+    @IBOutlet weak var textFieldUsername: UITextField!
     @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var btnCancel: UIButton!
     
@@ -25,32 +22,17 @@ class SignUpViewController: UIViewController, StoryboardInitializable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        setupBindings()
-//        viewModel
-//            .title
-//            .asObservable()
-//            .subscribe(onNext: {[weak self] title in
-//                self?.title = title
-//            }).disposed(by: disposeBag)
+        configureUI()
+        configureBindings()
     }
     
-    private func setupUI() {
-       // navigationItem.title = "Check In"
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    
 
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(true)
-//        navigationController?.setNavigationBarHidden(false, animated: true)
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(true)
-//        navigationController?.setNavigationBarHidden(true, animated: false)
-//    }
-//
-     private func setupBindings() {
+     private func configureBindings() {
         btnCancel.rx.tap
             .bind(to: viewModel.cancel)
             .disposed(by: disposeBag)
@@ -60,9 +42,36 @@ class SignUpViewController: UIViewController, StoryboardInitializable {
             .disposed(by: disposeBag)
         
         
-        tfEmail.rx.text.orEmpty.bind(to: viewModel.emailField.value).disposed(by: disposeBag)
-        tfPwd.rx.text.orEmpty.bind(to: viewModel.passwordField.value).disposed(by: disposeBag)
+        textFieldEmail.rx.text.orEmpty.bind(to: viewModel.emailField.value).disposed(by: disposeBag)
+        textFieldPassword.rx.text.orEmpty.bind(to: viewModel.passwordField.value).disposed(by: disposeBag)
+        textFieldUsername.rx.text.orEmpty.bind(to: viewModel.userNameField).disposed(by: disposeBag)
         
+        viewModel.isValid
+            .asObservable()
+            .subscribe(onNext: {[weak self] isValid in
+                self?.btnSignUp.changeState(isEnabled: isValid)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func configureUI() {
+        
+        self.view.applyGradient(colours: [UIColor.darkBlueColor, UIColor.lightBlueColor],
+                                locations: [0.2, 0.7],
+                                direction: GradientPoint.bottomTop.draw())
+        
+        btnSignUp.applyGradient(colours: [UIColor.lightGray, UIColor.clear],
+                                locations: [0.3, 0.6],
+                                direction: GradientPoint.topBottom.draw(),  withAlpha: 0.1)
+        
+        localize()
+    }
+    
+    
+    
+    private func localize() {
+        btnSignUp.setTitle("SignUp".localized(), for: .normal)
+        btnCancel.setTitle("Cancel".localized(), for: .normal)
     }
 }
 

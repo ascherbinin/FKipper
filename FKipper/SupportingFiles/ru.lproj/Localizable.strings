@@ -15,3 +15,10 @@
 
 "Today" = "Сегодня";
 "Yesterday" = "Вчера";
+
+// Auth
+
+"Login" = "Вход";
+"SignUp" = "Регистрация";
+"Cancel" = "Отмена";
+"NewAccountQuestion" = "У вас нет аккаунта? ";

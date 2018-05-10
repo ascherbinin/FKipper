@@ -29,6 +29,7 @@ class SpendingsCoordinator: BaseCoordinator<Void> {
         
         viewModel.didExit
             .subscribe(onNext: { [weak self] _ in
+            viewController.dismiss(animated: true, completion: nil)
             self?.showAuth(on: self?.window)
         }).disposed(by: disposeBag)
         

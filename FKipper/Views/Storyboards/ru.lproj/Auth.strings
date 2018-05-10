@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "6de-MM-rfW"; */
+"6de-MM-rfW.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "BYJ-LD-BGN"; */
+"BYJ-LD-BGN.normalTitle" = "Sign Up";
+
+/* Class = "UILabel"; text = "Don't have an account? "; ObjectID = "YkR-bo-SE0"; */
+"YkR-bo-SE0.text" = "Don't have an account? ";
+
+/* Class = "UILabel"; text = "FK"; ObjectID = "j1q-UG-Eg9"; */
+"j1q-UG-Eg9.text" = "FK";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "m5q-ih-boy"; */
+"m5q-ih-boy.normalTitle" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "miz-eJ-anw"; */
+"miz-eJ-anw.normalTitle" = "Login";

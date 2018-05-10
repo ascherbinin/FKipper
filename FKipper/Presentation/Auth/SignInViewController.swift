@@ -18,8 +18,7 @@ class SignInViewController: UIViewController, StoryboardInitializable {
     @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var textFieldEmail: UITextField!
-    @IBOutlet weak var lblEmail: UILabel!
-    @IBOutlet weak var lblPwd: UILabel!
+    @IBOutlet weak var newAccountLabel: UILabel!
     
     
     var viewModel: SignInViewModel!
@@ -28,31 +27,15 @@ class SignInViewController: UIViewController, StoryboardInitializable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureUI()
         configureBindings()
-        
-        self.view.applyGradient(colours: [UIColor.darkBlueColor, UIColor.lightBlueColor],
-                                locations: [0.2, 0.7],
-                                direction: GradientPoint.bottomTop.draw())
-
-        btnLogin.applyGradient(colours: [UIColor.lightGray, UIColor.clear],
-                               locations: [0.3, 0.6],
-                               direction: GradientPoint.topBottom.draw(),  withAlpha: 0.1)
- 
-//        btnLogin.setTitleColor(UIColor.white, for: .disabled)
-//        btnLogin.setTitleColor(UIColor.darkGray, for: .normal)
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(true)
-//        navigationController?.setNavigationBarHidden(false, animated: false)
-//    }
-    
+
     private func configureBindings() {
         textFieldEmail.rx.text.orEmpty.bind(to: viewModel.emailField.value).disposed(by: disposeBag)
         textFieldPassword.rx.text.orEmpty.bind(to: viewModel.passwordField.value).disposed(by: disposeBag)
@@ -96,5 +79,32 @@ class SignInViewController: UIViewController, StoryboardInitializable {
             .bind { [weak self] errorMessage in
                 self?.view.makeToast(errorMessage)
             }.disposed(by: disposeBag)
+    }
+    
+    private func configureUI() {
+        self.view.applyGradient(colours: [UIColor.darkBlueColor, UIColor.lightBlueColor],
+                                locations: [0.2, 0.7],
+                                direction: GradientPoint.bottomTop.draw())
+        
+        btnLogin.applyGradient(colours: [UIColor.lightGray, UIColor.clear],
+                               locations: [0.3, 0.6],
+                               direction: GradientPoint.topBottom.draw(),  withAlpha: 0.1)
+        localize()
+    }
+    
+    private func localize() {
+        btnLogin.setTitle("Login".localized(), for: .normal)
+        btnSignUp.setTitle("SignUp".localized(), for: .normal)
+        newAccountLabel.text = "NewAccountQuestion".localized()
+    }
+    
+}
+
+extension SignInViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController,
+                             presenting: UIViewController,
+                             source: UIViewController)
+        -> UIViewControllerAnimatedTransitioning? {
+            return FlipPresentAnimationController(originFrame: self.view.frame)
     }
 }

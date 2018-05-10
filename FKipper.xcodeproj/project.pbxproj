@@ -10,7 +10,6 @@
 		93072667208B5EAD00043101 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93072666208B5EAD00043101 /* GoogleService-Info.plist */; };
 		9309E39A2093422E00DB273A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309E3992093422E00DB273A /* SignInViewController.swift */; };
 		9309E39C2093423D00DB273A /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309E39B2093423D00DB273A /* SignInViewModel.swift */; };
-		9309E39E209342E900DB273A /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9309E39D209342E900DB273A /* Auth.storyboard */; };
 		9309E3A0209346B600DB273A /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309E39F209346B600DB273A /* SignInCoordinator.swift */; };
 		9310496020971F30003DCD57 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9310495F20971F30003DCD57 /* LoginModel.swift */; };
 		9310496220971FBF003DCD57 /* FieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9310496120971FBF003DCD57 /* FieldViewModel.swift */; };
@@ -27,6 +26,9 @@
 		93949971206A75F4006D5D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93949970206A75F4006D5D67 /* Assets.xcassets */; };
 		93949974206A75F4006D5D67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93949972206A75F4006D5D67 /* LaunchScreen.storyboard */; };
 		939C2BDF20A0622E008C3134 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C2BDE20A0622E008C3134 /* UIButtonExtension.swift */; };
+		93B7B65C20A3F88D0056C4FD /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B7B65E20A3F88D0056C4FD /* Auth.storyboard */; };
+		93B7B66320A40A950056C4FD /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7B66220A40A950056C4FD /* FlipPresentAnimationController.swift */; };
+		93B7B66520A40B520056C4FD /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7B66420A40B520056C4FD /* AnimationHelper.swift */; };
 		93C4DC4720A169F20008513F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4DC4620A169F20008513F /* GradientView.swift */; };
 		93C4DC4920A179F60008513F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4DC4820A179F60008513F /* UIViewExtension.swift */; };
 		93D67A54208DF0DA00C4DCD8 /* SpendingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A53208DF0DA00C4DCD8 /* SpendingsViewController.swift */; };
@@ -47,7 +49,6 @@
 		93072666208B5EAD00043101 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9309E3992093422E00DB273A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9309E39B2093423D00DB273A /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		9309E39D209342E900DB273A /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		9309E39F209346B600DB273A /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		9310495F20971F30003DCD57 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		9310496120971FBF003DCD57 /* FieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewModel.swift; sourceTree = "<group>"; };
@@ -69,6 +70,10 @@
 		93949973206A75F4006D5D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93949975206A75F4006D5D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		939C2BDE20A0622E008C3134 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		93B7B65D20A3F88D0056C4FD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Auth.storyboard; sourceTree = "<group>"; };
+		93B7B66020A3F88F0056C4FD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Auth.strings; sourceTree = "<group>"; };
+		93B7B66220A40A950056C4FD /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
+		93B7B66420A40B520056C4FD /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		93C4DC4620A169F20008513F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		93C4DC4820A179F60008513F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		93D67A53208DF0DA00C4DCD8 /* SpendingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +134,7 @@
 		932BFCDA209069150033522C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				93B7B66120A40A610056C4FD /* AnimationControllers */,
 				932BFCDB2090692E0033522C /* SpendingsSectionsHelper.swift */,
 				9310496120971FBF003DCD57 /* FieldViewModel.swift */,
 				93C4DC4620A169F20008513F /* GradientView.swift */,
@@ -189,7 +195,7 @@
 			children = (
 				9394996D206A75F4006D5D67 /* Main.storyboard */,
 				93949972206A75F4006D5D67 /* LaunchScreen.storyboard */,
-				9309E39D209342E900DB273A /* Auth.storyboard */,
+				93B7B65E20A3F88D0056C4FD /* Auth.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -240,6 +246,15 @@
 				93417FB6208DCB59006014A0 /* Base */,
 			);
 			path = FKipper;
+			sourceTree = "<group>";
+		};
+		93B7B66120A40A610056C4FD /* AnimationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				93B7B66220A40A950056C4FD /* FlipPresentAnimationController.swift */,
+				93B7B66420A40B520056C4FD /* AnimationHelper.swift */,
+			);
+			path = AnimationControllers;
 			sourceTree = "<group>";
 		};
 		93D67A52208DF0BE00C4DCD8 /* Spendings */ = {
@@ -340,7 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9309E39E209342E900DB273A /* Auth.storyboard in Resources */,
+				93B7B65C20A3F88D0056C4FD /* Auth.storyboard in Resources */,
 				935989CE2091915B00C2026D /* Localizable.strings in Resources */,
 				93949974206A75F4006D5D67 /* LaunchScreen.storyboard in Resources */,
 				93072667208B5EAD00043101 /* GoogleService-Info.plist in Resources */,
@@ -403,10 +418,12 @@
 				9394996A206A75F4006D5D67 /* AppDelegate.swift in Sources */,
 				93D67A56208DF0F600C4DCD8 /* SpendingsCoordinator.swift in Sources */,
 				9309E39C2093423D00DB273A /* SignInViewModel.swift in Sources */,
+				93B7B66520A40B520056C4FD /* AnimationHelper.swift in Sources */,
 				93DAC446209465D7003894D5 /* SignUpCoordinator.swift in Sources */,
 				9309E3A0209346B600DB273A /* SignInCoordinator.swift in Sources */,
 				9310496220971FBF003DCD57 /* FieldViewModel.swift in Sources */,
 				93DAC44820947A18003894D5 /* UUser.swift in Sources */,
+				93B7B66320A40A950056C4FD /* FlipPresentAnimationController.swift in Sources */,
 				935989D32091921400C2026D /* NSLocalizedStringExtension.swift in Sources */,
 				93DAC444209465C5003894D5 /* SignUpViewModel.swift in Sources */,
 				935989C92090A4FE00C2026D /* DateExtension.swift in Sources */,
@@ -452,6 +469,15 @@
 				935989CB209190C800C2026D /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		93B7B65E20A3F88D0056C4FD /* Auth.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93B7B65D20A3F88D0056C4FD /* en */,
+				93B7B66020A3F88F0056C4FD /* ru */,
+			);
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

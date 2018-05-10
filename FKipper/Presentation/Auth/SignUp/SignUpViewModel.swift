@@ -20,9 +20,11 @@ class SignUpViewModel {
     let didSuccessSignUp: Observable<UUser>
     let didCancel: Observable<Void>
 
+    let isValid = Variable<Bool>(false)
     
     let emailField = EmailFieldViewModel()
     let passwordField = PasswordFieldViewModel()
+    let userNameField = Variable("")
     private let disposeBag = DisposeBag()
     
     let title: Observable<String>
@@ -30,12 +32,6 @@ class SignUpViewModel {
     init(_ title: String) {
         
         self.title = Observable.just(title)
-        
-        //        let _selectSpend = PublishSubject<SpendViewModel>()
-        //        self.selectSpend = _selectSpend.asObserver()
-        //        self.selectedSpend = _selectSpend.asObservable().map{$0.spend}
-        //
-        //        query = baseQuery()
         
         let _signUpUser = PublishSubject<UUser>()
         self.signUpUser = _signUpUser.asObserver()
@@ -49,19 +45,34 @@ class SignUpViewModel {
             self?.createUser()
         }).disposed(by: disposeBag)
         
+        
+        Observable.combineLatest(emailField.value.asObservable(),
+                                 passwordField.value.asObservable())
+            .map {!$0.0.isEmpty && !$0.1.isEmpty}
+            .bind(to: isValid)
+            .disposed(by: disposeBag)
     }
     
     private func createUser () {
-//        let email = "Test@mail.ru"
-//        let pwd = "pwd123"
 
         Auth.auth().createUser(withEmail: emailField.value.value,
                                password: passwordField.value.value) { (user, error) in
             if error == nil {
                 let user = UUser(authData: user!)
-                print(user.name ?? "NO NAME")
-                self.signUpUser.onNext(user)
-                //Auth.auth().signIn(withEmail: email, password: pwd, completion: nil)
+                if !self.userNameField.value.isEmpty  {
+                    let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                    changeRequest?.displayName = self.userNameField.value
+                    changeRequest?.commitChanges { (error) in
+                        if error == nil {
+                            self.signUpUser.onNext(user)
+                        }                     
+                    }
+                }
+                else {
+                    print(user.name ?? "NO NAME")
+                    self.signUpUser.onNext(user)
+                }
+//                Auth.auth().signIn(withEmail: email, password: pwd, completion: nil)
             }
         }
         
