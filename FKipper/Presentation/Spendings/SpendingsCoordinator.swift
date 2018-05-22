@@ -30,7 +30,7 @@ class SpendingsCoordinator: BaseCoordinator<Void> {
         viewModel.didExit
             .subscribe(onNext: { [weak self] _ in
             viewController.dismiss(animated: true, completion: nil)
-            self?.showAuth(on: self?.window)
+//            self?.showAuth(on: self?.window)
         }).disposed(by: disposeBag)
         
         //        viewModel.
@@ -54,11 +54,11 @@ class SpendingsCoordinator: BaseCoordinator<Void> {
        print("\(spend.title)")
     }
     
-    private func showAuth(on window: UIWindow?) {
-        guard let window = window else { return }
-        let appCoordinator = AppCoordinator(window: window)
-        _ = coordinate(to: appCoordinator)
-    }
+//    private func showAuth(on window: UIWindow?) {
+//        guard let window = window else { return }
+//        let appCoordinator = AppCoordinator(window: window)
+//        _ = coordinate(to: appCoordinator)
+//    }
     
     //    private func showLanguageList(on rootViewController: UIViewController) -> Observable<String?> {
     //        let languageListCoordinator = LanguageListCoordinator(rootViewController: rootViewController)

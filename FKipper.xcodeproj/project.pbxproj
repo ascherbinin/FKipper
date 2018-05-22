@@ -21,6 +21,7 @@
 		935989CE2091915B00C2026D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 935989D02091915B00C2026D /* Localizable.strings */; };
 		935989D32091921400C2026D /* NSLocalizedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935989D22091921400C2026D /* NSLocalizedStringExtension.swift */; };
 		9386184820A076FE00FBCD93 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386184720A076FE00FBCD93 /* UIColorExtension.swift */; };
+		9389CFB320B42F6F0015CD51 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389CFB220B42F6F0015CD51 /* Coordinator.swift */; };
 		9394996A206A75F4006D5D67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93949969206A75F4006D5D67 /* AppDelegate.swift */; };
 		9394996F206A75F4006D5D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9394996D206A75F4006D5D67 /* Main.storyboard */; };
 		93949971206A75F4006D5D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93949970206A75F4006D5D67 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		935989D12091915D00C2026D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		935989D22091921400C2026D /* NSLocalizedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLocalizedStringExtension.swift; sourceTree = "<group>"; };
 		9386184720A076FE00FBCD93 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		9389CFB220B42F6F0015CD51 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		93949966206A75F4006D5D67 /* FKipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FKipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93949969206A75F4006D5D67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9394996E206A75F4006D5D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				93D67A5B208DF47200C4DCD8 /* LocalCollection.swift */,
 				93417FB7208DCB59006014A0 /* StoryboardInitializable.swift */,
 				93417FB8208DCB59006014A0 /* BaseCoordinator.swift */,
+				9389CFB220B42F6F0015CD51 /* Coordinator.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				93DAC444209465C5003894D5 /* SignUpViewModel.swift in Sources */,
 				935989C92090A4FE00C2026D /* DateExtension.swift in Sources */,
 				9386184820A076FE00FBCD93 /* UIColorExtension.swift in Sources */,
+				9389CFB320B42F6F0015CD51 /* Coordinator.swift in Sources */,
 				93D67A54208DF0DA00C4DCD8 /* SpendingsViewController.swift in Sources */,
 				932BFCDC2090692E0033522C /* SpendingsSectionsHelper.swift in Sources */,
 				93D67A5A208DF26600C4DCD8 /* Spend.swift in Sources */,
