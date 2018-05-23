@@ -9,7 +9,14 @@
 import Foundation
 import RxSwift
 
+protocol SignInViewModelCoordinatorDelegate {
+    func needShowSpendings()
+    func needShowSignUp(from controller: UIViewController)
+}
+
 class SignInViewModel {
+    
+    var coordinatorDelegate: SignInViewModelCoordinatorDelegate!
     
     let title: Observable<String>
     let showSignUp: AnyObserver<Void>
@@ -50,6 +57,11 @@ class SignInViewModel {
         self.showSpendings = _showSpendings.asObserver()
         self.showSpendingsViewController = _showSpendings.asObservable()
         
+//        self.showSignUpViewController
+//            .asObservable()
+//            .subscribe(onNext: { [ weak self] _ in
+//            self?.coordinatorDelegate.needShowSignUp()
+//        }).disposed(by: disposeBag)
         
         Observable.combineLatest(emailField.value.asObservable(),
                                  passwordField.value.asObservable())

@@ -7,30 +7,36 @@
 //
 import RxSwift
 
-class SpendingsCoordinator: BaseCoordinator<Void> {
+protocol SpendingsListCoordinatorDelegate {
+    func exit(from coordinator: Coordinator)
+}
+
+class SpendingsListCoordinator: Coordinator {
     
-    private let window: UIWindow
+    private let navigationController: UINavigationController
+    var delegate: SpendingsListCoordinatorDelegate!
     
-    init(window: UIWindow) {
-        self.window = window
+    init(with rootNavigationViewController: UINavigationController) {
+        self.navigationController = rootNavigationViewController
     }
     
-    override func start() -> Observable<Void> {
+    override func start() {
         let viewModel = SpendingsViewModel(title: "SpendingsTitle".localized())
         let viewController = SpendingsViewController.initFromStoryboard(name: "Main")
-        let navigationController = UINavigationController(rootViewController: viewController)
         
         viewController.viewModel = viewModel
         
         viewModel.selectedSpend
             .subscribe(onNext: { [weak self] spend in
-                self?.showSpend(in: navigationController, by: spend) })
+                self?.showSpend(in: self?.navigationController, by: spend) })
             .disposed(by: disposeBag)
         
         viewModel.didExit
             .subscribe(onNext: { [weak self] _ in
-            viewController.dismiss(animated: true, completion: nil)
+//            viewController.dismiss(animated: true, completion: nil)
+                guard let strongSelf = self else { return }
 //            self?.showAuth(on: self?.window)
+            strongSelf.delegate.exit(from: strongSelf)
         }).disposed(by: disposeBag)
         
         //        viewModel.
@@ -43,14 +49,16 @@ class SpendingsCoordinator: BaseCoordinator<Void> {
         //            .bind(to: viewModel.setCurrentLanguage)
         //            .disposed(by: disposeBag)
         //
+//
+//        window.rootViewController = navigationController
+//        window.makeKeyAndVisible()
+//
+//        return Observable.never()
         
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
-        
-        return Observable.never()
+        self.navigationController.present(viewController, animated: true, completion: nil)
     }
     
-    private func showSpend(in navigationController: UINavigationController, by spend: Spend) {
+    private func showSpend(in navigationController: UINavigationController?, by spend: Spend) {
        print("\(spend.title)")
     }
     

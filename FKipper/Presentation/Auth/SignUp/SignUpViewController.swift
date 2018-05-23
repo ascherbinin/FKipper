@@ -33,9 +33,10 @@ class SignUpViewController: UIViewController, StoryboardInitializable {
     
 
      private func configureBindings() {
-        btnCancel.rx.tap
-            .bind(to: viewModel.cancel)
-            .disposed(by: disposeBag)
+        btnCancel.rx.tap.subscribe(onNext: { [weak self] _ in
+            guard let strongSelf = self else { return}
+            strongSelf.viewModel.coordinatorDelegate.cancel(from: strongSelf)
+        }).disposed(by: disposeBag)
         
         btnSignUp.rx.tap
             .bind(to: viewModel.didTapSignUp)

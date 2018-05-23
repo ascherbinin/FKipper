@@ -10,15 +10,22 @@ import Foundation
 import RxSwift
 import FirebaseAuth
 
+protocol SignUpViewModelCoordinatorDelegate {
+    func successSignUp(from controller: UIViewController)
+    func cancel(from controller: UIViewController)
+}
+
 class SignUpViewModel {
     
+    
+    var coordinatorDelegate: SignUpViewModelCoordinatorDelegate!
     // MARK: - Inputs
     let signUpUser: AnyObserver<UUser>
     let cancel: AnyObserver<Void>
     let didTapSignUp = PublishSubject<Void>()
     // MARK: - Outputs
     let didSuccessSignUp: Observable<UUser>
-    let didCancel: Observable<Void>
+//    let didCancel: Observable<Void>
 
     let isValid = Variable<Bool>(false)
     
@@ -39,7 +46,10 @@ class SignUpViewModel {
         
         let _cancel = PublishSubject<Void>()
         self.cancel = _cancel.asObserver()
-        self.didCancel = _cancel.asObservable()
+        
+//        _cancel.asObservable().subscribe(onNext: { [weak self] _ in
+//            self?.coordinatorDelegate.cancel(from: vi)
+//        }).disposed(by: disposeBag)
         
         didTapSignUp.asObservable().bind(onNext: {[weak self] _ in
             self?.createUser()
@@ -64,13 +74,13 @@ class SignUpViewModel {
                     changeRequest?.displayName = self.userNameField.value
                     changeRequest?.commitChanges { (error) in
                         if error == nil {
-                            self.signUpUser.onNext(user)
-                        }                     
+//                            self.coordinatorDelegate.successSignUp(from: self)
+                        }
                     }
                 }
                 else {
                     print(user.name ?? "NO NAME")
-                    self.signUpUser.onNext(user)
+//                    self.coordinatorDelegate.successSignUp(from: self)
                 }
 //                Auth.auth().signIn(withEmail: email, password: pwd, completion: nil)
             }

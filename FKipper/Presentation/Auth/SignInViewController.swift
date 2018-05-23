@@ -51,9 +51,10 @@ class SignInViewController: UIViewController, StoryboardInitializable {
                 self?.title = title
             }).disposed(by: disposeBag)
         
-        btnSignUp.rx.tap
-            .bind(to: viewModel.showSignUp)
-            .disposed(by: disposeBag)
+        btnSignUp.rx.tap.subscribe(onNext: { [weak self] _ in
+            guard let strongSelf = self else { return}
+            strongSelf.viewModel.coordinatorDelegate.needShowSignUp(from: strongSelf)
+        }).disposed(by: disposeBag)
         
         viewModel.isValid
             .asObservable()
