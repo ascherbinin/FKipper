@@ -42,6 +42,10 @@ class SignUpViewController: UIViewController, StoryboardInitializable {
             .bind(to: viewModel.didTapSignUp)
             .disposed(by: disposeBag)
         
+        viewModel.didSuccessSignUp.subscribe(onNext: { [weak self] _ in
+            guard let strongSelf = self else { return}
+            strongSelf.viewModel.coordinatorDelegate.didSignUp(from: strongSelf)
+        }).disposed(by: disposeBag)
         
         textFieldEmail.rx.text.orEmpty.bind(to: viewModel.emailField.value).disposed(by: disposeBag)
         textFieldPassword.rx.text.orEmpty.bind(to: viewModel.passwordField.value).disposed(by: disposeBag)

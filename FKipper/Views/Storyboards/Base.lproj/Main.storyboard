@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-1528" y="123"/>
         </scene>
-        <!--SpendingsViewController-->
+        <!--Spendings List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SpendingsViewController" title="SpendingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SpendingsViewController" customModule="FKipper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpendingsListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SpendingsListViewController" customModule="FKipper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpendingsCell" rowHeight="85" id="3G9-0e-BPB" customClass="SpendingsTableViewCell" customModule="FKipper" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpendingsCell" rowHeight="85" id="3G9-0e-BPB" customClass="SpendingsListTableViewCell" customModule="FKipper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3G9-0e-BPB" id="xnY-81-hHV">
@@ -135,6 +135,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-690.39999999999998" y="122.78860569715144"/>
+        </scene>
+        <!--Today Spend View Controller-->
+        <scene sceneID="i6I-WT-240">
+            <objects>
+                <viewController storyboardIdentifier="TodaySpendViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZd-zv-149" customClass="TodaySpendViewController" customModule="FKipper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vzv-6o-Kza">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JlI-wh-eZ8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Su-BB-v9w">
+                                        <rect key="frame" x="67" y="213" width="240" height="240"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxl-Oj-76o">
+                                                <rect key="frame" x="65" y="96" width="111" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="RP6-Cd-RNS"/>
+                                            <constraint firstItem="Bxl-Oj-76o" firstAttribute="centerY" secondItem="6Su-BB-v9w" secondAttribute="centerY" id="h4S-nA-qAU"/>
+                                            <constraint firstItem="Bxl-Oj-76o" firstAttribute="centerX" secondItem="6Su-BB-v9w" secondAttribute="centerX" id="p6k-QR-9fP"/>
+                                            <constraint firstAttribute="height" constant="240" id="uot-84-fv8"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="120"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6Su-BB-v9w" firstAttribute="centerY" secondItem="JlI-wh-eZ8" secondAttribute="centerY" id="0kv-y2-2WH"/>
+                                    <constraint firstItem="6Su-BB-v9w" firstAttribute="centerX" secondItem="JlI-wh-eZ8" secondAttribute="centerX" id="6Mo-PR-5M4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JlI-wh-eZ8" firstAttribute="bottom" secondItem="Wgu-rC-m0b" secondAttribute="bottom" id="J95-8F-CHj"/>
+                            <constraint firstItem="JlI-wh-eZ8" firstAttribute="trailing" secondItem="Wgu-rC-m0b" secondAttribute="trailing" id="Std-bF-ngX"/>
+                            <constraint firstItem="JlI-wh-eZ8" firstAttribute="leading" secondItem="Wgu-rC-m0b" secondAttribute="leading" id="hQU-I5-lMT"/>
+                            <constraint firstItem="JlI-wh-eZ8" firstAttribute="top" secondItem="Vzv-6o-Kza" secondAttribute="top" id="kiC-rT-FzJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wgu-rC-m0b"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5j-s1-wdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.3999999999999999" y="119.1904047976012"/>
         </scene>
     </scenes>
 </document>

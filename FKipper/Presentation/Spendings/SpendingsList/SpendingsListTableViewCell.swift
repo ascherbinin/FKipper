@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SpendingsTableViewCell: UITableViewCell {
+class SpendingsListTableViewCell: UITableViewCell {
     
     static let reuseIdentificator = "SpendingsCell"
     

@@ -11,12 +11,13 @@ import RxSwift
 
 protocol SignInCoordinatorDelegate {
     func didSignIn(from coordinator: Coordinator)
+    func didFinish(from coordinator: Coordinator)
 }
 
 class SignInCoordinator: Coordinator {
     
     private let navigationController: UINavigationController
-    private let delegate: SignInCoordinatorDelegate
+    var delegate: SignInCoordinatorDelegate!
     
     lazy var signInViewModel: SignInViewModel! = {
         let viewModel = SignInViewModel(title: "SignInTitle".localized()) 
@@ -30,35 +31,15 @@ class SignInCoordinator: Coordinator {
         return viewModel
     }()
     
-    init(on navigationController: UINavigationController,
-         delegate: SignInCoordinatorDelegate) {
+    init(on navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.delegate = delegate
     }
     
     override func start() {
         let viewController = SignInViewController.initFromStoryboard(name: "Auth")
         viewController.viewModel = signInViewModel
-        self.navigationController.present(viewController, animated: true, completion: nil)
-//        viewModel
-//            .showSignUpViewController
-//            .flatMap { [weak self] _ -> Observable<UUser?> in
-//                guard let `self` = self else { return .empty() }
-//
-//                return self.showSignUpViewController(on: viewController)
-//            }.subscribe(onNext:{ user in
-//                if user != nil {
-//                    self.
-//                }
-//            })
-//            .disposed(by: disposeBag)
-        
-//        viewModel
-//            .showSpendingsViewController
-//            .subscribe(onNext: { [weak self] _ in
-//            guard let `self` = self else { return }
-//            self.delegate.didSignIn()
-//        }).disposed(by: disposeBag)
+        self.navigationController.setViewControllers([viewController], animated: true)
+//        self.navigationController.present(viewController, animated: true, completion: nil)
     }
     
     private func showSignUpViewController(from controller: UIViewController) {
@@ -69,15 +50,15 @@ class SignInCoordinator: Coordinator {
         }
         controller.present(signUpViewController, animated: true, completion: nil)
     }
-//
-//    private func showSpendingsViewController(on window: UIWindow) {
-//        let spendingsCoordinator = SpendingsCoordinator(window: window)
-//        _ = coordinate(to: spendingsCoordinator)
-//    }
+    
+    override func finish() {
+        delegate?.didFinish(from: self)
+    }
+
 }
 
 extension SignInCoordinator: SignInViewModelCoordinatorDelegate {
-    func needShowSpendings() {
+    func didSignIn(from controller: UIViewController) {
         delegate.didSignIn(from: self)
     }
     
@@ -88,13 +69,12 @@ extension SignInCoordinator: SignInViewModelCoordinatorDelegate {
 }
 
 extension SignInCoordinator: SignUpViewModelCoordinatorDelegate {
-    func cancel(from controller: UIViewController) {
-         controller.dismiss(animated: true, completion: nil)
-    }
-    
-    func successSignUp(from controller: UIViewController) {
+    func didSignUp(from controller: UIViewController) {
         delegate.didSignIn(from: self)
         controller.dismiss(animated: true, completion: nil)
     }
-
+    
+    func cancel(from controller: UIViewController) {
+         controller.dismiss(animated: true, completion: nil)
+    }
 }

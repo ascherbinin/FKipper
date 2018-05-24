@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 protocol SignInViewModelCoordinatorDelegate {
-    func needShowSpendings()
+    func didSignIn(from controller: UIViewController)
     func needShowSignUp(from controller: UIViewController)
 }
 
@@ -20,9 +20,9 @@ class SignInViewModel {
     
     let title: Observable<String>
     let showSignUp: AnyObserver<Void>
-    let showSpendings: AnyObserver<Void>
+    let signInSuccess: AnyObserver<Void>
     let showSignUpViewController: Observable<Void>
-    let showSpendingsViewController: Observable<Void>
+    let didSignIn: Observable<Void>
     
     let isValid = Variable<Bool>(false)
     
@@ -53,16 +53,10 @@ class SignInViewModel {
         emailField.errorValue.asObservable().bind(to: errorMessage).disposed(by: disposeBag)
         passwordField.errorValue.asObservable().bind(to: errorMessage).disposed(by: disposeBag)
         
-        let _showSpendings = PublishSubject<Void>()
-        self.showSpendings = _showSpendings.asObserver()
-        self.showSpendingsViewController = _showSpendings.asObservable()
-        
-//        self.showSignUpViewController
-//            .asObservable()
-//            .subscribe(onNext: { [ weak self] _ in
-//            self?.coordinatorDelegate.needShowSignUp()
-//        }).disposed(by: disposeBag)
-        
+        let _signInSuccess = PublishSubject<Void>()
+        self.signInSuccess = _signInSuccess.asObserver()
+        self.didSignIn = _signInSuccess.asObservable()
+    
         Observable.combineLatest(emailField.value.asObservable(),
                                  passwordField.value.asObservable())
             .map {!$0.0.isEmpty && !$0.1.isEmpty}
@@ -76,7 +70,7 @@ class SignInViewModel {
                            password: passwordField.getValue()) { [weak self] (user, error) in
             if error == nil {
                 print("SIGNIN COMPLETE \(user?.email ?? "EMPTY EMAIL")")
-                self?.showSpendings.onNext(())
+                self?.signInSuccess.onNext(())
             }
             else {
                 self?.errorMessage.value = error?.localizedDescription

@@ -13,14 +13,14 @@ import RxCocoa
 import RxDataSources
 import Toast_Swift
 
-class SpendingsViewController: UIViewController, StoryboardInitializable, UITableViewDelegate {
+class SpendingsListViewController: UIViewController, StoryboardInitializable, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView!
     
-    var viewModel: SpendingsViewModel!
+    var viewModel: SpendingsListViewModel!
     private let disposeBag = DisposeBag()
     
-    let dataSource: RxTableViewSectionedAnimatedDataSource<SectionOfSpends> = SpendingsViewController.dataSource()
+    let dataSource: RxTableViewSectionedAnimatedDataSource<SectionOfSpends> = SpendingsListViewController.dataSource()
     
     private let exitButton = UIBarButtonItem(barButtonSystemItem: .action , target: nil, action: nil)
     
@@ -60,14 +60,17 @@ class SpendingsViewController: UIViewController, StoryboardInitializable, UITabl
                 self?.view.hideToastActivity()
             }
         }).disposed(by: disposeBag)
-        
-        exitButton.rx.tap.debug("====TAP")
-            .bind(to: viewModel.exit)
-            .disposed(by: disposeBag)
+
+        exitButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            guard let strongSelf = self else { return}
+            strongSelf.viewModel.coordinatorDelegate.cancel(from: strongSelf)
+        }).disposed(by: disposeBag)
+
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
         viewModel.startObserveQuery()
     }
 
@@ -79,7 +82,7 @@ class SpendingsViewController: UIViewController, StoryboardInitializable, UITabl
     
 }
 
-extension SpendingsViewController {
+extension SpendingsListViewController {
     static func dataSource() -> RxTableViewSectionedAnimatedDataSource<SectionOfSpends> {
         
         func setupSectionHeader(_ header: String) -> String {
@@ -98,7 +101,7 @@ extension SpendingsViewController {
                                                            reloadAnimation: .none,
                                                            deleteAnimation: .none),
             configureCell: { (dataSource, table, idxPath, item) in
-                let cell = table.dequeueReusableCell(withIdentifier: SpendingsTableViewCell.reuseIdentificator, for: idxPath) as? SpendingsTableViewCell
+                let cell = table.dequeueReusableCell(withIdentifier: SpendingsListTableViewCell.reuseIdentificator, for: idxPath) as? SpendingsListTableViewCell
                  cell?.spendViewModel = item
                 return cell!
         },

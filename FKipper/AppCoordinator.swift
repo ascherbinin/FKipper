@@ -43,28 +43,34 @@ class AppCoordinator: Coordinator {
     }
     
     private func showAuth() {
-        let signInViewController = SignInCoordinator(on: rootViewController, delegate: self)
-        addChildCoordinator(signInViewController)
-        signInViewController.start()
+        let signInViewCoordinator = SignInCoordinator(on: rootViewController)
+        signInViewCoordinator.delegate = self
+        addChildCoordinator(signInViewCoordinator)
+        
+        signInViewCoordinator.start()
     }
     
     private func showMainScreen () {
-        let spendingsListCoordinator = SpendingsListCoordinator(with: rootViewController)
-        spendingsListCoordinator.delegate = self
-        addChildCoordinator(spendingsListCoordinator)
-        spendingsListCoordinator.start()
+        let todaySpendCoordinator = TodaySpendCoordinator(on: rootViewController)
+        todaySpendCoordinator.delegate = self
+        addChildCoordinator(todaySpendCoordinator)
+        todaySpendCoordinator.start()
         print("haliluya open main screen")
     }
 }
 
 extension AppCoordinator: SignInCoordinatorDelegate {
+    func didFinish(from coordinator: Coordinator) {
+        removeChildCoordinator(coordinator)
+    }
+    
     func didSignIn(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)
         showMainScreen()
     }
 }
 
-extension AppCoordinator: SpendingsListCoordinatorDelegate {
+extension AppCoordinator: TodaySpendCoordinatorDelegate {
     func exit(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)
         showAuth()

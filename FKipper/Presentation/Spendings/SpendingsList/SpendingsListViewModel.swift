@@ -11,8 +11,15 @@ import UIKit
 import RxSwift
 import FirebaseFirestore
 
-class SpendingsViewModel {
+protocol SpendingsListViewModelCoordinatorDelegate {
+//    func didSignUp(from controller: UIViewController)
+    func cancel(from controller: UIViewController)
+}
 
+class SpendingsListViewModel {
+
+    var coordinatorDelegate: SpendingsListViewModelCoordinatorDelegate!
+    
     let exit: AnyObserver<Void>
     let didExit: Observable<Void>
     let selectedSpend: Observable<Spend>

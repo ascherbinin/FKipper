@@ -56,6 +56,11 @@ class SignInViewController: UIViewController, StoryboardInitializable {
             strongSelf.viewModel.coordinatorDelegate.needShowSignUp(from: strongSelf)
         }).disposed(by: disposeBag)
         
+        viewModel.didSignIn.subscribe(onNext: { [weak self] _ in
+            guard let strongSelf = self else { return}
+            strongSelf.viewModel.coordinatorDelegate.didSignIn(from: strongSelf)
+        }).disposed(by: disposeBag)
+        
         viewModel.isValid
             .asObservable()
             .subscribe(onNext: {[weak self] isValid in

@@ -27,21 +27,24 @@
 		93949971206A75F4006D5D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93949970206A75F4006D5D67 /* Assets.xcassets */; };
 		93949974206A75F4006D5D67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93949972206A75F4006D5D67 /* LaunchScreen.storyboard */; };
 		939C2BDF20A0622E008C3134 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C2BDE20A0622E008C3134 /* UIButtonExtension.swift */; };
+		93A820C320B692E300B79787 /* TodaySpendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A820C220B692E300B79787 /* TodaySpendViewController.swift */; };
+		93A820C520B692EE00B79787 /* TodaySpendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A820C420B692EE00B79787 /* TodaySpendViewModel.swift */; };
+		93A820C720B6930700B79787 /* TodaySpendCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A820C620B6930700B79787 /* TodaySpendCoordinator.swift */; };
 		93B7B65C20A3F88D0056C4FD /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B7B65E20A3F88D0056C4FD /* Auth.storyboard */; };
 		93B7B66320A40A950056C4FD /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7B66220A40A950056C4FD /* FlipPresentAnimationController.swift */; };
 		93B7B66520A40B520056C4FD /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7B66420A40B520056C4FD /* AnimationHelper.swift */; };
 		93C4DC4720A169F20008513F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4DC4620A169F20008513F /* GradientView.swift */; };
 		93C4DC4920A179F60008513F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4DC4820A179F60008513F /* UIViewExtension.swift */; };
-		93D67A54208DF0DA00C4DCD8 /* SpendingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A53208DF0DA00C4DCD8 /* SpendingsViewController.swift */; };
-		93D67A56208DF0F600C4DCD8 /* SpendingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A55208DF0F600C4DCD8 /* SpendingsCoordinator.swift */; };
-		93D67A58208DF10000C4DCD8 /* SpendingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A57208DF10000C4DCD8 /* SpendingsViewModel.swift */; };
+		93D67A54208DF0DA00C4DCD8 /* SpendingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A53208DF0DA00C4DCD8 /* SpendingsListViewController.swift */; };
+		93D67A56208DF0F600C4DCD8 /* SpendingsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A55208DF0F600C4DCD8 /* SpendingsListCoordinator.swift */; };
+		93D67A58208DF10000C4DCD8 /* SpendingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A57208DF10000C4DCD8 /* SpendingsListViewModel.swift */; };
 		93D67A5A208DF26600C4DCD8 /* Spend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A59208DF26600C4DCD8 /* Spend.swift */; };
 		93D67A5C208DF47200C4DCD8 /* LocalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A5B208DF47200C4DCD8 /* LocalCollection.swift */; };
 		93DAC442209465B0003894D5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC441209465B0003894D5 /* SignUpViewController.swift */; };
 		93DAC444209465C5003894D5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC443209465C5003894D5 /* SignUpViewModel.swift */; };
 		93DAC446209465D7003894D5 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC445209465D7003894D5 /* SignUpCoordinator.swift */; };
 		93DAC44820947A18003894D5 /* UUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC44720947A18003894D5 /* UUser.swift */; };
-		93EDCC54208DF82A0005D00F /* SpendingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCC53208DF82A0005D00F /* SpendingsTableViewCell.swift */; };
+		93EDCC54208DF82A0005D00F /* SpendingsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCC53208DF82A0005D00F /* SpendingsListTableViewCell.swift */; };
 		FC17B25D73E2A2FC55F7CDC2 /* libPods-FKipper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D1F602D40D8885379EF95 /* libPods-FKipper.a */; };
 /* End PBXBuildFile section */
 
@@ -72,15 +75,18 @@
 		93949973206A75F4006D5D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93949975206A75F4006D5D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		939C2BDE20A0622E008C3134 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		93A820C220B692E300B79787 /* TodaySpendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySpendViewController.swift; sourceTree = "<group>"; };
+		93A820C420B692EE00B79787 /* TodaySpendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySpendViewModel.swift; sourceTree = "<group>"; };
+		93A820C620B6930700B79787 /* TodaySpendCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySpendCoordinator.swift; sourceTree = "<group>"; };
 		93B7B65D20A3F88D0056C4FD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		93B7B66020A3F88F0056C4FD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Auth.strings; sourceTree = "<group>"; };
 		93B7B66220A40A950056C4FD /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		93B7B66420A40B520056C4FD /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		93C4DC4620A169F20008513F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		93C4DC4820A179F60008513F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		93D67A53208DF0DA00C4DCD8 /* SpendingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsViewController.swift; sourceTree = "<group>"; };
-		93D67A55208DF0F600C4DCD8 /* SpendingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsCoordinator.swift; sourceTree = "<group>"; };
-		93D67A57208DF10000C4DCD8 /* SpendingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsViewModel.swift; sourceTree = "<group>"; };
+		93D67A53208DF0DA00C4DCD8 /* SpendingsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsListViewController.swift; sourceTree = "<group>"; };
+		93D67A55208DF0F600C4DCD8 /* SpendingsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsListCoordinator.swift; sourceTree = "<group>"; };
+		93D67A57208DF10000C4DCD8 /* SpendingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsListViewModel.swift; sourceTree = "<group>"; };
 		93D67A59208DF26600C4DCD8 /* Spend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spend.swift; sourceTree = "<group>"; };
 		93D67A5B208DF47200C4DCD8 /* LocalCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalCollection.swift; sourceTree = "<group>"; };
 		93DAC441209465B0003894D5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +95,7 @@
 		93DAC44720947A18003894D5 /* UUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUser.swift; sourceTree = "<group>"; };
 		93DAC449209481DB003894D5 /* FKipper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FKipper-Bridging-Header.h"; sourceTree = "<group>"; };
 		93DAC44C20949493003894D5 /* FKipper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FKipper.entitlements; sourceTree = "<group>"; };
-		93EDCC53208DF82A0005D00F /* SpendingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsTableViewCell.swift; sourceTree = "<group>"; };
+		93EDCC53208DF82A0005D00F /* SpendingsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsListTableViewCell.swift; sourceTree = "<group>"; };
 		AF7D706053ABB190998F1E33 /* Pods-FKipper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKipper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FKipper/Pods-FKipper.debug.xcconfig"; sourceTree = "<group>"; };
 		D69D1F602D40D8885379EF95 /* libPods-FKipper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FKipper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -251,6 +257,27 @@
 			path = FKipper;
 			sourceTree = "<group>";
 		};
+		93A820C020B692A400B79787 /* SpendingsList */ = {
+			isa = PBXGroup;
+			children = (
+				93D67A53208DF0DA00C4DCD8 /* SpendingsListViewController.swift */,
+				93D67A55208DF0F600C4DCD8 /* SpendingsListCoordinator.swift */,
+				93D67A57208DF10000C4DCD8 /* SpendingsListViewModel.swift */,
+				93EDCC53208DF82A0005D00F /* SpendingsListTableViewCell.swift */,
+			);
+			path = SpendingsList;
+			sourceTree = "<group>";
+		};
+		93A820C120B692B700B79787 /* TodaySpend */ = {
+			isa = PBXGroup;
+			children = (
+				93A820C220B692E300B79787 /* TodaySpendViewController.swift */,
+				93A820C420B692EE00B79787 /* TodaySpendViewModel.swift */,
+				93A820C620B6930700B79787 /* TodaySpendCoordinator.swift */,
+			);
+			path = TodaySpend;
+			sourceTree = "<group>";
+		};
 		93B7B66120A40A610056C4FD /* AnimationControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,10 +290,8 @@
 		93D67A52208DF0BE00C4DCD8 /* Spendings */ = {
 			isa = PBXGroup;
 			children = (
-				93D67A53208DF0DA00C4DCD8 /* SpendingsViewController.swift */,
-				93D67A55208DF0F600C4DCD8 /* SpendingsCoordinator.swift */,
-				93D67A57208DF10000C4DCD8 /* SpendingsViewModel.swift */,
-				93EDCC53208DF82A0005D00F /* SpendingsTableViewCell.swift */,
+				93A820C120B692B700B79787 /* TodaySpend */,
+				93A820C020B692A400B79787 /* SpendingsList */,
 			);
 			path = Spendings;
 			sourceTree = "<group>";
@@ -417,9 +442,10 @@
 				9310496020971F30003DCD57 /* LoginModel.swift in Sources */,
 				939C2BDF20A0622E008C3134 /* UIButtonExtension.swift in Sources */,
 				93D67A5C208DF47200C4DCD8 /* LocalCollection.swift in Sources */,
-				93EDCC54208DF82A0005D00F /* SpendingsTableViewCell.swift in Sources */,
+				93A820C520B692EE00B79787 /* TodaySpendViewModel.swift in Sources */,
+				93EDCC54208DF82A0005D00F /* SpendingsListTableViewCell.swift in Sources */,
 				9394996A206A75F4006D5D67 /* AppDelegate.swift in Sources */,
-				93D67A56208DF0F600C4DCD8 /* SpendingsCoordinator.swift in Sources */,
+				93D67A56208DF0F600C4DCD8 /* SpendingsListCoordinator.swift in Sources */,
 				9309E39C2093423D00DB273A /* SignInViewModel.swift in Sources */,
 				93B7B66520A40B520056C4FD /* AnimationHelper.swift in Sources */,
 				93DAC446209465D7003894D5 /* SignUpCoordinator.swift in Sources */,
@@ -432,7 +458,9 @@
 				935989C92090A4FE00C2026D /* DateExtension.swift in Sources */,
 				9386184820A076FE00FBCD93 /* UIColorExtension.swift in Sources */,
 				9389CFB320B42F6F0015CD51 /* Coordinator.swift in Sources */,
-				93D67A54208DF0DA00C4DCD8 /* SpendingsViewController.swift in Sources */,
+				93A820C320B692E300B79787 /* TodaySpendViewController.swift in Sources */,
+				93A820C720B6930700B79787 /* TodaySpendCoordinator.swift in Sources */,
+				93D67A54208DF0DA00C4DCD8 /* SpendingsListViewController.swift in Sources */,
 				932BFCDC2090692E0033522C /* SpendingsSectionsHelper.swift in Sources */,
 				93D67A5A208DF26600C4DCD8 /* Spend.swift in Sources */,
 				9309E39A2093422E00DB273A /* SignInViewController.swift in Sources */,
@@ -441,7 +469,7 @@
 				93C4DC4920A179F60008513F /* UIViewExtension.swift in Sources */,
 				93C4DC4720A169F20008513F /* GradientView.swift in Sources */,
 				93417FBA208DCB59006014A0 /* BaseCoordinator.swift in Sources */,
-				93D67A58208DF10000C4DCD8 /* SpendingsViewModel.swift in Sources */,
+				93D67A58208DF10000C4DCD8 /* SpendingsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
