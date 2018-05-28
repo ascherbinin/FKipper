@@ -18,7 +18,7 @@ protocol SpendingsListViewModelCoordinatorDelegate {
 class SpendingsListViewModel {
 
     var coordinatorDelegate: SpendingsListViewModelCoordinatorDelegate!
-    
+
     let exit: AnyObserver<Void>
     let didExit: Observable<Void>
     let selectedSpend: Observable<Spend>
@@ -28,6 +28,7 @@ class SpendingsListViewModel {
     
     let sections = Variable<[SectionOfSpends]>([])
     private var documents: [DocumentSnapshot] = []
+    var userID: String
     
     fileprivate var query: Query? {
         didSet {
@@ -41,7 +42,6 @@ class SpendingsListViewModel {
     private var listener: ListenerRegistration?
     
     func startObserveQuery() {
-        return // REMOVE FOR WORK
         guard let query = query else { return }
         stopObserving()
         
@@ -91,10 +91,10 @@ class SpendingsListViewModel {
     }
     
     fileprivate func baseQuery() -> Query {
-        return Firestore.firestore().collection("spends").limit(to: 20)
+        return Firestore.firestore().collection("spends").document(self.userID).collection("entries")
     }
     
-    init(title: String) {
+    init(title: String, userID: String) {
 
         self.title = Observable.just(title)
         
@@ -105,6 +105,8 @@ class SpendingsListViewModel {
         let _exit = PublishSubject<Void>()
         self.exit = _exit.asObserver()
         self.didExit = _exit.asObservable()
+        
+        self.userID = userID
         
         query = baseQuery()
         

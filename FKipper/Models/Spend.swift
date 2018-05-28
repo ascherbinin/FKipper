@@ -71,7 +71,7 @@ extension SpendViewModel: IdentifiableType {
 
 extension SpendViewModel: Hashable {
     var hashValue: Int {
-        return spend.date.hashValue + spend.costValue.hashValue
+        return spend.date.hashValue
     }
     
     static func == (lhs: SpendViewModel, rhs: SpendViewModel) -> Bool {

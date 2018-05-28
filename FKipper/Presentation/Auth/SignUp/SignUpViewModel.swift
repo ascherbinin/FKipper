@@ -25,7 +25,8 @@ class SignUpViewModel {
     let didTapSignUp = PublishSubject<Void>()
     // MARK: - Outputs
     let didSuccessSignUp: Observable<UUser>
-//    let didCancel: Observable<Void>
+
+    
 
     let isValid = Variable<Bool>(false)
     

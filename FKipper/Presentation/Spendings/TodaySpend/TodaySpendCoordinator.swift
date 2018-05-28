@@ -30,7 +30,7 @@ class TodaySpendCoordinator: Coordinator {
     }()
     
     lazy var spendingsListSpendViewModel: SpendingsListViewModel! = {
-        let viewModel = SpendingsListViewModel(title: "SignInTitle".localized())
+        let viewModel = SpendingsListViewModel(title: "SignInTitle".localized(), userID: userID)
         viewModel.coordinatorDelegate = self
         return viewModel
     }()
