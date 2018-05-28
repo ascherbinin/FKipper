@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "782CAA797C3F8AF1C7D3EBE285D97F89"
+               BlueprintIdentifier = "37A41366156A1AB6A8F787E781950E6B"
                BlueprintName = "Pods-FKipper"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-FKipper.a">

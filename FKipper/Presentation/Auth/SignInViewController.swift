@@ -19,6 +19,7 @@ class SignInViewController: UIViewController, StoryboardInitializable {
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var newAccountLabel: UILabel!
+    @IBOutlet weak var btnSkip: UIButton!
     
     
     var viewModel: SignInViewModel!
@@ -76,6 +77,11 @@ class SignInViewController: UIViewController, StoryboardInitializable {
                 if self.viewModel.validForm() {
                     self.viewModel.signin()
                 }
+            }).disposed(by: disposeBag)
+        
+        btnSkip.rx.tap
+            .subscribe(onNext: { [unowned self] in
+                self.viewModel.signin(isAnonymous: true)
             }).disposed(by: disposeBag)
         
         

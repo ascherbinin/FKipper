@@ -12,7 +12,6 @@ import RxSwift
 import FirebaseFirestore
 
 protocol SpendingsListViewModelCoordinatorDelegate {
-//    func didSignUp(from controller: UIViewController)
     func cancel(from controller: UIViewController)
 }
 
@@ -42,6 +41,7 @@ class SpendingsListViewModel {
     private var listener: ListenerRegistration?
     
     func startObserveQuery() {
+        return // REMOVE FOR WORK
         guard let query = query else { return }
         stopObserving()
         

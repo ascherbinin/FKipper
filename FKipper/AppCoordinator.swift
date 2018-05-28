@@ -30,12 +30,7 @@ class AppCoordinator: Coordinator {
         
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
-        
-        if !isLogged {
-            showAuth()
-        } else {
-            showMainScreen()
-        }
+        startObserveAuthState()
     }
     
     override func finish() {
@@ -50,12 +45,27 @@ class AppCoordinator: Coordinator {
         signInViewCoordinator.start()
     }
     
-    private func showMainScreen () {
-        let todaySpendCoordinator = TodaySpendCoordinator(on: rootViewController)
+    private func showMainScreen (for userID: String?) {
+        guard let uid = userID else {
+            return
+        }
+        let todaySpendCoordinator = TodaySpendCoordinator(on: rootViewController, for: uid)
         todaySpendCoordinator.delegate = self
         addChildCoordinator(todaySpendCoordinator)
         todaySpendCoordinator.start()
         print("haliluya open main screen")
+    }
+    
+    private func startObserveAuthState() {
+        Auth.auth().addStateDidChangeListener() {[weak self] auth, user in
+        // 2
+            if user != nil {
+                self?.showMainScreen(for: user?.uid)
+            }
+            else {
+                self?.showAuth()
+            }
+        }
     }
 }
 
@@ -66,14 +76,18 @@ extension AppCoordinator: SignInCoordinatorDelegate {
     
     func didSignIn(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)
-        showMainScreen()
+//        showMainScreen()
     }
 }
 
 extension AppCoordinator: TodaySpendCoordinatorDelegate {
     func exit(from coordinator: Coordinator) {
-        removeChildCoordinator(coordinator)
-        showAuth()
+        do {
+            try Auth.auth().signOut()
+              removeChildCoordinator(coordinator)
+        } catch (let error) {
+            print("Auth sign out failed: \(error)")
+        }
     }
 }
 

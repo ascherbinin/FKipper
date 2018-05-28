@@ -1,0 +1,6 @@
+module RxAnimated [system] {
+  umbrella header "RxAnimated-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,12 +8,14 @@
 
 import Foundation
 import RxSwift
+import RxAnimated
 
 class TodaySpendViewController: UIViewController, StoryboardInitializable {
     
     var viewModel: TodaySpendViewModelType!
     private let disposeBag = DisposeBag()
 
+    @IBOutlet weak var lblTotalSpend: UILabel!
     
     private let exitButton = UIBarButtonItem(barButtonSystemItem: .action , target: nil, action: nil)
     
@@ -62,20 +64,28 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
         exitButton.rx.tap
             .bind(to: viewModel.exit)
             .disposed(by: disposeBag)
-//
-//        exitButton.rx.tap.subscribe(onNext: { [weak self] _ in
-//            guard let strongSelf = self else { return}
-//            strongSelf.viewModel.didExit
-//        }).disposed(by: disposeBag)
+        
+        addButton.rx.tap
+            .bind(to: viewModel.tapOnAdd)
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .totalSpendToday
+            .asObservable()
+            .map{"\($0)"}
+            .bind(animated: lblTotalSpend.rx.animated.tick(.top, duration: 0.33).text)
+            .disposed(by: disposeBag)
         
         listButton.rx.tap
             .bind(to: viewModel.tapOnList)
             .disposed(by: disposeBag)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+        viewModel.startObserveQuery()
     }
   
 }

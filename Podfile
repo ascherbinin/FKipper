@@ -11,6 +11,7 @@ target 'FKipper' do
   pod 'Toast-Swift'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxAnimated'
   pod 'RxDataSources'
   pod 'Firebase/Auth'
 end

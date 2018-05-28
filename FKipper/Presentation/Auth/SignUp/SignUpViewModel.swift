@@ -75,7 +75,6 @@ class SignUpViewModel {
                     }
                 }
                 else {
-                    print(user.name ?? "NO NAME")
                     self.signUpSuccess.onNext(user)
                 }
 //                Auth.auth().signIn(withEmail: email, password: pwd, completion: nil)

@@ -65,15 +65,18 @@ class SignInViewModel {
         
     }
     
-    func signin() {
-        Auth.auth().signIn(withEmail: emailField.getValue(),
-                           password: passwordField.getValue()) { [weak self] (user, error) in
-            if error == nil {
-                print("SIGNIN COMPLETE \(user?.email ?? "EMPTY EMAIL")")
-                self?.signInSuccess.onNext(())
+    func signin(isAnonymous: Bool = false) {
+        if isAnonymous {
+            Auth.auth().signInAnonymously {[weak self] (user, error) in
+                guard let error = error else { return }
+                self?.errorMessage.value = error.localizedDescription
             }
-            else {
-                self?.errorMessage.value = error?.localizedDescription
+        }
+        else {
+            Auth.auth().signIn(withEmail: emailField.getValue(),
+                               password: passwordField.getValue()) { [weak self] (user, error) in
+                                guard let error = error else { return }
+                                self?.errorMessage.value = error.localizedDescription
             }
         }
     }

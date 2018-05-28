@@ -71,6 +71,13 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.5.0)
+  - RxAnimated (0.4.1):
+    - RxAnimated/Core (= 0.4.1)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxAnimated/Core (0.4.1):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
   - RxCocoa (4.1.1):
     - RxSwift (~> 4.0)
   - RxDataSources (3.0.2):
@@ -84,6 +91,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - RxAnimated
   - RxCocoa
   - RxDataSources
   - RxSwift
@@ -108,6 +116,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - RxAnimated
     - RxCocoa
     - RxDataSources
     - RxSwift
@@ -131,11 +140,12 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  RxAnimated: 8b3142830a60840ebed5755d33b9c88ad5a1647c
   RxCocoa: fd0862fd2df95fa55562ad28ffd2522c25eb4a85
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: c6e3b1c7b325c7d121cd4327e9d98b7ed746b570
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: f2b4d158493fe65d1ca269af406aca6200c3b4e0
+PODFILE CHECKSUM: 9ae72832182f301ee817d42676541940b5858d00
 
 COCOAPODS: 1.5.0

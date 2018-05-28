@@ -29,7 +29,7 @@ class SpendingsListViewController: UIViewController, StoryboardInitializable, UI
         super.viewDidLoad()
         bindSpendsWithTableView()
         
-        navigationItem.leftBarButtonItem = exitButton
+       // navigationItem.leftBarButtonItem = exitButton
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 66
@@ -79,7 +79,6 @@ class SpendingsListViewController: UIViewController, StoryboardInitializable, UI
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
     }
-    
 }
 
 extension SpendingsListViewController {
