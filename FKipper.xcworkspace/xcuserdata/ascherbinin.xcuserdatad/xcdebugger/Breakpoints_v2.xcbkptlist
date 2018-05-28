@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Spendings/TodaySpend/TodaySpendViewModel.swift"
-            timestampString = "549191200.314308"
+            timestampString = "549202729.970171"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "startObserveQuery()"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,13 +74,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Spendings/TodaySpend/TodaySpendViewModel.swift"
-            timestampString = "549191200.3143719"
+            timestampString = "549202729.970265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "startObserveQuery()"
-            landmarkType = "7">
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "TodaySpendViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Spendings/TodaySpend/TodaySpendViewModel.swift"
-            timestampString = "549191200.314431"
+            timestampString = "549202729.970348"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "startObserveQuery()"
             landmarkType = "7">
             <Locations>
@@ -138,11 +138,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Spendings/TodaySpend/TodaySpendViewModel.swift"
-            timestampString = "549191200.314491"
+            timestampString = "549202729.970422"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "startObserveQuery()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FKipper/Presentation/Spendings/TodaySpend/TodaySpendViewModel.swift"
+            timestampString = "549202729.970493"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "stopObserving()"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,27 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Spendings/TodaySpend/TodaySpendViewModel.swift"
-            timestampString = "549191200.314549"
+            timestampString = "549202729.9705549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "makeBaseQuery()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FKipper/Presentation/Spendings/TodaySpend/TodaySpendViewModel.swift"
-            timestampString = "549191200.314606"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "startObserveQuery()"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,7 +202,7 @@
                   moduleName = "FKipper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ascherbinin/Documents/Projects/FKipper/FKipper/Presentation/Auth/SignInViewModel.swift"
-                  timestampString = "549197321.881456"
+                  timestampString = "549202035.904115"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -217,7 +217,7 @@
                   moduleName = "FKipper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ascherbinin/Documents/Projects/FKipper/FKipper/Presentation/Auth/SignInViewModel.swift"
-                  timestampString = "549197321.883315"
+                  timestampString = "549202035.906011"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Spendings/AddSpend/AddSpendViewModel.swift"
-            timestampString = "549191200.314778"
+            timestampString = "549202729.9706481"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Spendings/TodaySpend/TodaySpendCoordinator.swift"
-            timestampString = "549197568.000713"
+            timestampString = "549202729.970708"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
@@ -282,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Spendings/TodaySpend/TodaySpendCoordinator.swift"
-            timestampString = "549197568.000774"
+            timestampString = "549202729.9707561"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -294,31 +294,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FKipper/Presentation/Spendings/AddSpend/AddSpendViewModel.swift"
-            timestampString = "549191200.66238"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "addNewSpand()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FKipper/Presentation/Spendings/TodaySpend/TodaySpendViewModel.swift"
-            timestampString = "549196769.754684"
+            timestampString = "549202729.9708019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "startObserveQuery()"
             landmarkType = "7">
             <Locations>
@@ -361,13 +345,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FKipper/Models/Spend.swift"
-            timestampString = "549197568.00085"
+            filePath = "FKipper/Presentation/Spendings/AddSpend/AddSpendViewModel.swift"
+            timestampString = "549202729.970856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "init(dictionary:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "addNewSpand()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -377,29 +361,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FKipper/Models/Spend.swift"
-            timestampString = "549197568.001148"
+            filePath = "FKipper/Presentation/Spendings/TodaySpend/TodaySpendViewController.swift"
+            timestampString = "549202729.9709049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "init(dictionary:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FKipper/Models/Spend.swift"
-            timestampString = "549197568.001359"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "init(dictionary:)"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

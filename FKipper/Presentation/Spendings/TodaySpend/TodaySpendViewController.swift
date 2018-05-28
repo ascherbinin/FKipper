@@ -31,17 +31,6 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
         let rightButtons = [listButton, addButton]
 
         navigationItem.rightBarButtonItems = rightButtons
-//        tableView.rowHeight = UITableViewAutomaticDimension
-//        tableView.estimatedRowHeight = 66
-//
-//        tableView.rx
-//            .modelSelected(SpendViewModel.self)
-//            .bind(to: viewModel.selectSpend)
-//            .disposed(by: disposeBag)
-        
-        //        viewModel.selectedSpend.asObservable().subscribe(onNext: { spend in
-        //            print(spend.title)
-        //        }).disposed(by: disposeBag)
         
         viewModel
             .titleText
@@ -76,6 +65,10 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
             .bind(animated: lblTotalSpend.rx.animated.tick(.top, duration: 0.33).text)
             .disposed(by: disposeBag)
         
+        viewModel.todaySpends.bind { (spends) in
+            self.createCategoriesViews(todaySpends: spends)
+        }.disposed(by: disposeBag)
+        
         listButton.rx.tap
             .bind(to: viewModel.tapOnList)
             .disposed(by: disposeBag)
@@ -87,5 +80,16 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
         navigationController?.setNavigationBarHidden(false, animated: true)
         viewModel.startObserveQuery()
     }
+    
+    fileprivate func createCategoriesViews(todaySpends: [Spend]) {
+        for spend in todaySpends {
+            let image = spend.category.image()
+            let imageView = UIImageView(frame: CGRect(x: Int(200 + arc4random_uniform(100)), y: Int(300 + arc4random_uniform(100)), width: 36, height: 36))
+            imageView.backgroundColor = UIColor.black
+            imageView.image = image
+            self.view.addSubview(imageView)
+        }
+    }
+
   
 }

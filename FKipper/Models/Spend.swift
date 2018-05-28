@@ -10,17 +10,37 @@ import Foundation
 import RxSwift
 import RxDataSources
 
+enum Category: String, EnumCollection {
+    case Auto
+    case Entertainment
+    case Food
+    
+    func image() -> UIImage {
+        switch self {
+        case .Auto:
+            return #imageLiteral(resourceName: "cat_auto")
+        case .Entertainment:
+            return #imageLiteral(resourceName: "cat_entertainment")
+        case .Food:
+            return #imageLiteral(resourceName: "cat_food")
+        }
+    }
+
+}
+
+
+
 struct Spend {
     
     var title: String
-    var category: String
+    var category: Category
     var costValue: Double
     var date: Date
     
     var dictionary: [String: Any] {
         return [
             "title": title,
-            "category": category,
+            "category": category.rawValue,
             "costValue": costValue,
             "date": date
         ]
@@ -36,7 +56,10 @@ extension Spend : DocumentSerializable {
         let costValue = dictionary["costValue"] as? Double,
         let date = dictionary["date"] as? Date else { return nil }
         
-        self.init(title: title, category: category,
+        guard let cat = Category(rawValue: category) else {
+            return nil
+        }
+        self.init(title: title, category: cat,
                   costValue: costValue, date: date)
     }
 }
@@ -54,7 +77,7 @@ class SpendViewModel {
         self.spend = spend
         
         titleText = BehaviorSubject<String>(value: spend.title)
-        categoryText = BehaviorSubject<String>(value: spend.category)
+        categoryText = BehaviorSubject<String>(value: spend.category.rawValue)
         costValue = BehaviorSubject<Double>(value: spend.costValue)
         date = BehaviorSubject<Date>(value: spend.date)
     }

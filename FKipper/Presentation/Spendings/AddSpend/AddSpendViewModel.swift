@@ -58,8 +58,9 @@ class AddSpendViewModel: AddSpendViewModelType {
     func addNewSpand() {
         guard let title = titleField.value,
             let cat = categoryField.value,
+            let category = Category(rawValue: cat),
             let value = Double(valueField.value ?? "") else { return }
-        let newSpend = Spend(title: title, category: cat, costValue: value, date: Date())
+        let newSpend = Spend(title: title, category: category, costValue: value, date: Date())
         db.collection("spends").document(self.userID).collection("entries").document().setData(newSpend.dictionary)
         addedSpendSuccess.onNext(newSpend)
         

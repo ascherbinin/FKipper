@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 import FirebaseFirestore
 
 protocol TodaySpendViewModelType {
@@ -21,7 +22,8 @@ protocol TodaySpendViewModelType {
     var tapOnList: AnyObserver<Void> { get }
     var didTapOnList: Observable<Void> { get }
     
-    var totalSpendToday: Variable<Double> { get }
+    var totalSpendToday: BehaviorRelay<Double> { get }
+    var todaySpends: BehaviorRelay<[Spend]> { get }
     
     func startObserveQuery()
 }
@@ -46,7 +48,8 @@ class TodaySpendViewModel: TodaySpendViewModelType {
     let tapOnAdd: AnyObserver<Void>
     let didTapOnAdd: Observable<Void>
     
-    let totalSpendToday = Variable<Double>(0.0)
+    let totalSpendToday = BehaviorRelay<Double>(value: 0.0)
+    var todaySpends = BehaviorRelay<[Spend]>(value: [])
     
     var coordinatorDelegate: TodaySpendViewModelCoordinatorDelegate!
 
@@ -106,6 +109,7 @@ class TodaySpendViewModel: TodaySpendViewModelType {
             }
             
             let filteredModels = models.filter{ Calendar.current.isDateInToday($0.date)}
+            self.todaySpends.accept(filteredModels)
             let totalSpends = filteredModels.reduce(0, { $0 + $1.costValue})
             
 //            var sectionsDict: [String : SectionOfSpends] = [:]
@@ -125,7 +129,7 @@ class TodaySpendViewModel: TodaySpendViewModelType {
 //            let sortDict = sectionsDict.sorted(by: { (arg0, arg1) -> Bool in
 //                return arg0.key > arg1.key
 //            })
-            self.totalSpendToday.value = totalSpends
+            self.totalSpendToday.accept(totalSpends)
             print(totalSpends)
 //            self.sections.value = sortDict.map{$0.1}
 //            self.documents = snapshot.documents
@@ -140,5 +144,4 @@ class TodaySpendViewModel: TodaySpendViewModelType {
     fileprivate func makeBaseQuery() -> Query {
         return Firestore.firestore().collection("spends").document(self.userID).collection("entries")
     }
-
 }

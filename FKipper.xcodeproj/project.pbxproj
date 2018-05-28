@@ -46,6 +46,7 @@
 		93DAC44820947A18003894D5 /* UUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC44720947A18003894D5 /* UUser.swift */; };
 		93E49B2420BBE871009458BB /* AddSpendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E49B2320BBE871009458BB /* AddSpendViewModel.swift */; };
 		93E49B2620BBE87D009458BB /* AddSpendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E49B2520BBE87D009458BB /* AddSpendViewController.swift */; };
+		93EC5D8920BC2014005D7A23 /* EnumExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EC5D8820BC2014005D7A23 /* EnumExtension.swift */; };
 		93EDCC54208DF82A0005D00F /* SpendingsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCC53208DF82A0005D00F /* SpendingsListTableViewCell.swift */; };
 		FC17B25D73E2A2FC55F7CDC2 /* libPods-FKipper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D1F602D40D8885379EF95 /* libPods-FKipper.a */; };
 /* End PBXBuildFile section */
@@ -99,6 +100,7 @@
 		93DAC44C20949493003894D5 /* FKipper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FKipper.entitlements; sourceTree = "<group>"; };
 		93E49B2320BBE871009458BB /* AddSpendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendViewModel.swift; sourceTree = "<group>"; };
 		93E49B2520BBE87D009458BB /* AddSpendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendViewController.swift; sourceTree = "<group>"; };
+		93EC5D8820BC2014005D7A23 /* EnumExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumExtension.swift; sourceTree = "<group>"; };
 		93EDCC53208DF82A0005D00F /* SpendingsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsListTableViewCell.swift; sourceTree = "<group>"; };
 		AF7D706053ABB190998F1E33 /* Pods-FKipper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKipper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FKipper/Pods-FKipper.debug.xcconfig"; sourceTree = "<group>"; };
 		D69D1F602D40D8885379EF95 /* libPods-FKipper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FKipper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +223,7 @@
 				939C2BDE20A0622E008C3134 /* UIButtonExtension.swift */,
 				9386184720A076FE00FBCD93 /* UIColorExtension.swift */,
 				93C4DC4820A179F60008513F /* UIViewExtension.swift */,
+				93EC5D8820BC2014005D7A23 /* EnumExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93417FC5208DD1B8006014A0 /* AppCoordinator.swift in Sources */,
+				93EC5D8920BC2014005D7A23 /* EnumExtension.swift in Sources */,
 				9310496020971F30003DCD57 /* LoginModel.swift in Sources */,
 				939C2BDF20A0622E008C3134 /* UIButtonExtension.swift in Sources */,
 				93D67A5C208DF47200C4DCD8 /* LocalCollection.swift in Sources */,
