@@ -8,38 +8,100 @@
 
 /* Begin PBXBuildFile section */
 		93072667208B5EAD00043101 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93072666208B5EAD00043101 /* GoogleService-Info.plist */; };
+		9309E39A2093422E00DB273A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309E3992093422E00DB273A /* SignInViewController.swift */; };
+		9309E39C2093423D00DB273A /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309E39B2093423D00DB273A /* SignInViewModel.swift */; };
+		9309E3A0209346B600DB273A /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309E39F209346B600DB273A /* SignInCoordinator.swift */; };
+		9310496020971F30003DCD57 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9310495F20971F30003DCD57 /* LoginModel.swift */; };
+		9310496220971FBF003DCD57 /* FieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9310496120971FBF003DCD57 /* FieldViewModel.swift */; };
+		932BFCDC2090692E0033522C /* SpendingsSectionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932BFCDB2090692E0033522C /* SpendingsSectionsHelper.swift */; };
 		93417FB9208DCB59006014A0 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FB7208DCB59006014A0 /* StoryboardInitializable.swift */; };
 		93417FBA208DCB59006014A0 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FB8208DCB59006014A0 /* BaseCoordinator.swift */; };
 		93417FC5208DD1B8006014A0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FC4208DD1B8006014A0 /* AppCoordinator.swift */; };
-		93417FCB208DE68F006014A0 /* RecipeSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FC7208DE68F006014A0 /* RecipeSearchViewModel.swift */; };
-		93417FCC208DE68F006014A0 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FC8208DE68F006014A0 /* RecipeTableViewCell.swift */; };
-		93417FCD208DE68F006014A0 /* RecipeSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FC9208DE68F006014A0 /* RecipeSearchCoordinator.swift */; };
-		93417FCE208DE68F006014A0 /* RecipeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417FCA208DE68F006014A0 /* RecipeSearchViewController.swift */; };
+		935989C92090A4FE00C2026D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935989C82090A4FE00C2026D /* DateExtension.swift */; };
+		935989CE2091915B00C2026D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 935989D02091915B00C2026D /* Localizable.strings */; };
+		935989D32091921400C2026D /* NSLocalizedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935989D22091921400C2026D /* NSLocalizedStringExtension.swift */; };
+		9386184820A076FE00FBCD93 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386184720A076FE00FBCD93 /* UIColorExtension.swift */; };
+		9389CFB320B42F6F0015CD51 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389CFB220B42F6F0015CD51 /* Coordinator.swift */; };
 		9394996A206A75F4006D5D67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93949969206A75F4006D5D67 /* AppDelegate.swift */; };
 		9394996F206A75F4006D5D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9394996D206A75F4006D5D67 /* Main.storyboard */; };
 		93949971206A75F4006D5D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93949970206A75F4006D5D67 /* Assets.xcassets */; };
 		93949974206A75F4006D5D67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93949972206A75F4006D5D67 /* LaunchScreen.storyboard */; };
-		FC9A8085AF87ECFE69156176 /* Pods_FKipper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319741F13E75B74B186B190 /* Pods_FKipper.framework */; };
+		939C2BDF20A0622E008C3134 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C2BDE20A0622E008C3134 /* UIButtonExtension.swift */; };
+		93A820C320B692E300B79787 /* TodaySpendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A820C220B692E300B79787 /* TodaySpendViewController.swift */; };
+		93A820C520B692EE00B79787 /* TodaySpendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A820C420B692EE00B79787 /* TodaySpendViewModel.swift */; };
+		93A820C720B6930700B79787 /* TodaySpendCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A820C620B6930700B79787 /* TodaySpendCoordinator.swift */; };
+		93B7B65C20A3F88D0056C4FD /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B7B65E20A3F88D0056C4FD /* Auth.storyboard */; };
+		93B7B66320A40A950056C4FD /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7B66220A40A950056C4FD /* FlipPresentAnimationController.swift */; };
+		93B7B66520A40B520056C4FD /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7B66420A40B520056C4FD /* AnimationHelper.swift */; };
+		93C4DC4720A169F20008513F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4DC4620A169F20008513F /* GradientView.swift */; };
+		93C4DC4920A179F60008513F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4DC4820A179F60008513F /* UIViewExtension.swift */; };
+		93D67A54208DF0DA00C4DCD8 /* SpendingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A53208DF0DA00C4DCD8 /* SpendingsListViewController.swift */; };
+		93D67A56208DF0F600C4DCD8 /* SpendingsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A55208DF0F600C4DCD8 /* SpendingsListCoordinator.swift */; };
+		93D67A58208DF10000C4DCD8 /* SpendingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A57208DF10000C4DCD8 /* SpendingsListViewModel.swift */; };
+		93D67A5A208DF26600C4DCD8 /* Spend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A59208DF26600C4DCD8 /* Spend.swift */; };
+		93D67A5C208DF47200C4DCD8 /* LocalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D67A5B208DF47200C4DCD8 /* LocalCollection.swift */; };
+		93DAC442209465B0003894D5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC441209465B0003894D5 /* SignUpViewController.swift */; };
+		93DAC444209465C5003894D5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC443209465C5003894D5 /* SignUpViewModel.swift */; };
+		93DAC446209465D7003894D5 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC445209465D7003894D5 /* SignUpCoordinator.swift */; };
+		93DAC44820947A18003894D5 /* UUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC44720947A18003894D5 /* UUser.swift */; };
+		93E49B2420BBE871009458BB /* AddSpendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E49B2320BBE871009458BB /* AddSpendViewModel.swift */; };
+		93E49B2620BBE87D009458BB /* AddSpendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E49B2520BBE87D009458BB /* AddSpendViewController.swift */; };
+		93EDCC54208DF82A0005D00F /* SpendingsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCC53208DF82A0005D00F /* SpendingsListTableViewCell.swift */; };
+		FC17B25D73E2A2FC55F7CDC2 /* libPods-FKipper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D1F602D40D8885379EF95 /* libPods-FKipper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		90784703997F58CE36E42D32 /* Pods-FKipper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKipper.release.xcconfig"; path = "Pods/Target Support Files/Pods-FKipper/Pods-FKipper.release.xcconfig"; sourceTree = "<group>"; };
 		93072666208B5EAD00043101 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9309E3992093422E00DB273A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		9309E39B2093423D00DB273A /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		9309E39F209346B600DB273A /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		9310495F20971F30003DCD57 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		9310496120971FBF003DCD57 /* FieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewModel.swift; sourceTree = "<group>"; };
+		932BFCDB2090692E0033522C /* SpendingsSectionsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsSectionsHelper.swift; sourceTree = "<group>"; };
 		93417FB7208DCB59006014A0 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 		93417FB8208DCB59006014A0 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		93417FC4208DD1B8006014A0 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		93417FC7208DE68F006014A0 /* RecipeSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearchViewModel.swift; sourceTree = "<group>"; };
-		93417FC8208DE68F006014A0 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
-		93417FC9208DE68F006014A0 /* RecipeSearchCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearchCoordinator.swift; sourceTree = "<group>"; };
-		93417FCA208DE68F006014A0 /* RecipeSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearchViewController.swift; sourceTree = "<group>"; };
+		935989C82090A4FE00C2026D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		935989CA209190C700C2026D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		935989CB209190C800C2026D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		935989CF2091915B00C2026D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		935989D12091915D00C2026D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		935989D22091921400C2026D /* NSLocalizedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLocalizedStringExtension.swift; sourceTree = "<group>"; };
+		9386184720A076FE00FBCD93 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		9389CFB220B42F6F0015CD51 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		93949966206A75F4006D5D67 /* FKipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FKipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93949969206A75F4006D5D67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9394996E206A75F4006D5D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93949970206A75F4006D5D67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93949973206A75F4006D5D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93949975206A75F4006D5D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A319741F13E75B74B186B190 /* Pods_FKipper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FKipper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		939C2BDE20A0622E008C3134 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		93A820C220B692E300B79787 /* TodaySpendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySpendViewController.swift; sourceTree = "<group>"; };
+		93A820C420B692EE00B79787 /* TodaySpendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySpendViewModel.swift; sourceTree = "<group>"; };
+		93A820C620B6930700B79787 /* TodaySpendCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySpendCoordinator.swift; sourceTree = "<group>"; };
+		93B7B65D20A3F88D0056C4FD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Auth.storyboard; sourceTree = "<group>"; };
+		93B7B66020A3F88F0056C4FD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Auth.strings; sourceTree = "<group>"; };
+		93B7B66220A40A950056C4FD /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
+		93B7B66420A40B520056C4FD /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
+		93C4DC4620A169F20008513F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		93C4DC4820A179F60008513F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		93D67A53208DF0DA00C4DCD8 /* SpendingsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsListViewController.swift; sourceTree = "<group>"; };
+		93D67A55208DF0F600C4DCD8 /* SpendingsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsListCoordinator.swift; sourceTree = "<group>"; };
+		93D67A57208DF10000C4DCD8 /* SpendingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsListViewModel.swift; sourceTree = "<group>"; };
+		93D67A59208DF26600C4DCD8 /* Spend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spend.swift; sourceTree = "<group>"; };
+		93D67A5B208DF47200C4DCD8 /* LocalCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalCollection.swift; sourceTree = "<group>"; };
+		93DAC441209465B0003894D5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		93DAC443209465C5003894D5 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		93DAC445209465D7003894D5 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		93DAC44720947A18003894D5 /* UUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUser.swift; sourceTree = "<group>"; };
+		93DAC449209481DB003894D5 /* FKipper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FKipper-Bridging-Header.h"; sourceTree = "<group>"; };
+		93DAC44C20949493003894D5 /* FKipper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FKipper.entitlements; sourceTree = "<group>"; };
+		93E49B2320BBE871009458BB /* AddSpendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendViewModel.swift; sourceTree = "<group>"; };
+		93E49B2520BBE87D009458BB /* AddSpendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendViewController.swift; sourceTree = "<group>"; };
+		93EDCC53208DF82A0005D00F /* SpendingsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsListTableViewCell.swift; sourceTree = "<group>"; };
 		AF7D706053ABB190998F1E33 /* Pods-FKipper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKipper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FKipper/Pods-FKipper.debug.xcconfig"; sourceTree = "<group>"; };
+		D69D1F602D40D8885379EF95 /* libPods-FKipper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FKipper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC9A8085AF87ECFE69156176 /* Pods_FKipper.framework in Frameworks */,
+				FC17B25D73E2A2FC55F7CDC2 /* libPods-FKipper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,16 +119,48 @@
 		1394ED96B2462C0F50A4E3C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A319741F13E75B74B186B190 /* Pods_FKipper.framework */,
+				D69D1F602D40D8885379EF95 /* libPods-FKipper.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9309E3982093421000DB273A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				93DAC44020946590003894D5 /* SignUp */,
+				9309E3992093422E00DB273A /* SignInViewController.swift */,
+				9309E39B2093423D00DB273A /* SignInViewModel.swift */,
+				9309E39F209346B600DB273A /* SignInCoordinator.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		9310495E20971F0F003DCD57 /* ScreensModels */ = {
+			isa = PBXGroup;
+			children = (
+				9310495F20971F30003DCD57 /* LoginModel.swift */,
+			);
+			path = ScreensModels;
+			sourceTree = "<group>";
+		};
+		932BFCDA209069150033522C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				93B7B66120A40A610056C4FD /* AnimationControllers */,
+				932BFCDB2090692E0033522C /* SpendingsSectionsHelper.swift */,
+				9310496120971FBF003DCD57 /* FieldViewModel.swift */,
+				93C4DC4620A169F20008513F /* GradientView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		93417FB6208DCB59006014A0 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				93D67A5B208DF47200C4DCD8 /* LocalCollection.swift */,
 				93417FB7208DCB59006014A0 /* StoryboardInitializable.swift */,
 				93417FB8208DCB59006014A0 /* BaseCoordinator.swift */,
+				9389CFB220B42F6F0015CD51 /* Coordinator.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -74,6 +168,8 @@
 		93417FBD208DCE78006014A0 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				93DAC449209481DB003894D5 /* FKipper-Bridging-Header.h */,
+				935989D02091915B00C2026D /* Localizable.strings */,
 				93949975206A75F4006D5D67 /* Info.plist */,
 				93072666208B5EAD00043101 /* GoogleService-Info.plist */,
 			);
@@ -83,7 +179,8 @@
 		93417FBE208DCE87006014A0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				93417FC6208DE68F006014A0 /* RecipeSearchViewController */,
+				9309E3982093421000DB273A /* Auth */,
+				93D67A52208DF0BE00C4DCD8 /* Spendings */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -91,6 +188,9 @@
 		93417FBF208DCEBD006014A0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9310495E20971F0F003DCD57 /* ScreensModels */,
+				93D67A59208DF26600C4DCD8 /* Spend.swift */,
+				93DAC44720947A18003894D5 /* UUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,19 +208,21 @@
 			children = (
 				9394996D206A75F4006D5D67 /* Main.storyboard */,
 				93949972206A75F4006D5D67 /* LaunchScreen.storyboard */,
+				93B7B65E20A3F88D0056C4FD /* Auth.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		93417FC6208DE68F006014A0 /* RecipeSearchViewController */ = {
+		935989C72090A4F100C2026D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				93417FC7208DE68F006014A0 /* RecipeSearchViewModel.swift */,
-				93417FC8208DE68F006014A0 /* RecipeTableViewCell.swift */,
-				93417FC9208DE68F006014A0 /* RecipeSearchCoordinator.swift */,
-				93417FCA208DE68F006014A0 /* RecipeSearchViewController.swift */,
+				935989C82090A4FE00C2026D /* DateExtension.swift */,
+				935989D22091921400C2026D /* NSLocalizedStringExtension.swift */,
+				939C2BDE20A0622E008C3134 /* UIButtonExtension.swift */,
+				9386184720A076FE00FBCD93 /* UIColorExtension.swift */,
+				93C4DC4820A179F60008513F /* UIViewExtension.swift */,
 			);
-			path = RecipeSearchViewController;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9394995D206A75F4006D5D67 = {
@@ -144,6 +246,9 @@
 		93949968206A75F4006D5D67 /* FKipper */ = {
 			isa = PBXGroup;
 			children = (
+				93DAC44C20949493003894D5 /* FKipper.entitlements */,
+				935989C72090A4F100C2026D /* Extensions */,
+				932BFCDA209069150033522C /* Helpers */,
 				93417FC0208DCEC5006014A0 /* Views */,
 				93417FBF208DCEBD006014A0 /* Models */,
 				93417FBE208DCE87006014A0 /* Presentation */,
@@ -154,6 +259,65 @@
 				93417FB6208DCB59006014A0 /* Base */,
 			);
 			path = FKipper;
+			sourceTree = "<group>";
+		};
+		93A820C020B692A400B79787 /* SpendingsList */ = {
+			isa = PBXGroup;
+			children = (
+				93D67A53208DF0DA00C4DCD8 /* SpendingsListViewController.swift */,
+				93D67A55208DF0F600C4DCD8 /* SpendingsListCoordinator.swift */,
+				93D67A57208DF10000C4DCD8 /* SpendingsListViewModel.swift */,
+				93EDCC53208DF82A0005D00F /* SpendingsListTableViewCell.swift */,
+			);
+			path = SpendingsList;
+			sourceTree = "<group>";
+		};
+		93A820C120B692B700B79787 /* TodaySpend */ = {
+			isa = PBXGroup;
+			children = (
+				93A820C220B692E300B79787 /* TodaySpendViewController.swift */,
+				93A820C420B692EE00B79787 /* TodaySpendViewModel.swift */,
+				93A820C620B6930700B79787 /* TodaySpendCoordinator.swift */,
+			);
+			path = TodaySpend;
+			sourceTree = "<group>";
+		};
+		93B7B66120A40A610056C4FD /* AnimationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				93B7B66220A40A950056C4FD /* FlipPresentAnimationController.swift */,
+				93B7B66420A40B520056C4FD /* AnimationHelper.swift */,
+			);
+			path = AnimationControllers;
+			sourceTree = "<group>";
+		};
+		93D67A52208DF0BE00C4DCD8 /* Spendings */ = {
+			isa = PBXGroup;
+			children = (
+				93E49B2220BBE856009458BB /* AddSpend */,
+				93A820C120B692B700B79787 /* TodaySpend */,
+				93A820C020B692A400B79787 /* SpendingsList */,
+			);
+			path = Spendings;
+			sourceTree = "<group>";
+		};
+		93DAC44020946590003894D5 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				93DAC441209465B0003894D5 /* SignUpViewController.swift */,
+				93DAC443209465C5003894D5 /* SignUpViewModel.swift */,
+				93DAC445209465D7003894D5 /* SignUpCoordinator.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		93E49B2220BBE856009458BB /* AddSpend */ = {
+			isa = PBXGroup;
+			children = (
+				93E49B2320BBE871009458BB /* AddSpendViewModel.swift */,
+				93E49B2520BBE87D009458BB /* AddSpendViewController.swift */,
+			);
+			path = AddSpend;
 			sourceTree = "<group>";
 		};
 		A4B4CD70ADA2828E78587246 /* Pods */ = {
@@ -176,8 +340,7 @@
 				93949962206A75F4006D5D67 /* Sources */,
 				93949963206A75F4006D5D67 /* Frameworks */,
 				93949964206A75F4006D5D67 /* Resources */,
-				54C5E5EE2241D0D965C4B014 /* [CP] Embed Pods Frameworks */,
-				B1BF804B8B3962812846BE59 /* [CP] Copy Pods Resources */,
+				C724507A91B5496F82A9DE67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,7 +363,13 @@
 				TargetAttributes = {
 					93949965206A75F4006D5D67 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -211,6 +380,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 9394995D206A75F4006D5D67;
 			productRefGroup = 93949967206A75F4006D5D67 /* Products */;
@@ -227,6 +397,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B7B65C20A3F88D0056C4FD /* Auth.storyboard in Resources */,
+				935989CE2091915B00C2026D /* Localizable.strings in Resources */,
 				93949974206A75F4006D5D67 /* LaunchScreen.storyboard in Resources */,
 				93072667208B5EAD00043101 /* GoogleService-Info.plist in Resources */,
 				93949971206A75F4006D5D67 /* Assets.xcassets in Resources */,
@@ -237,41 +409,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		54C5E5EE2241D0D965C4B014 /* [CP] Embed Pods Frameworks */ = {
+		C724507A91B5496F82A9DE67 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FKipper/Pods-FKipper-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FKipper/Pods-FKipper-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B1BF804B8B3962812846BE59 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FKipper/Pods-FKipper-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC/gRPCCertificates.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -303,24 +452,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93417FCE208DE68F006014A0 /* RecipeSearchViewController.swift in Sources */,
 				93417FC5208DD1B8006014A0 /* AppCoordinator.swift in Sources */,
+				9310496020971F30003DCD57 /* LoginModel.swift in Sources */,
+				939C2BDF20A0622E008C3134 /* UIButtonExtension.swift in Sources */,
+				93D67A5C208DF47200C4DCD8 /* LocalCollection.swift in Sources */,
+				93A820C520B692EE00B79787 /* TodaySpendViewModel.swift in Sources */,
+				93EDCC54208DF82A0005D00F /* SpendingsListTableViewCell.swift in Sources */,
 				9394996A206A75F4006D5D67 /* AppDelegate.swift in Sources */,
-				93417FCD208DE68F006014A0 /* RecipeSearchCoordinator.swift in Sources */,
+				93D67A56208DF0F600C4DCD8 /* SpendingsListCoordinator.swift in Sources */,
+				9309E39C2093423D00DB273A /* SignInViewModel.swift in Sources */,
+				93B7B66520A40B520056C4FD /* AnimationHelper.swift in Sources */,
+				93DAC446209465D7003894D5 /* SignUpCoordinator.swift in Sources */,
+				9309E3A0209346B600DB273A /* SignInCoordinator.swift in Sources */,
+				9310496220971FBF003DCD57 /* FieldViewModel.swift in Sources */,
+				93DAC44820947A18003894D5 /* UUser.swift in Sources */,
+				93B7B66320A40A950056C4FD /* FlipPresentAnimationController.swift in Sources */,
+				93E49B2620BBE87D009458BB /* AddSpendViewController.swift in Sources */,
+				935989D32091921400C2026D /* NSLocalizedStringExtension.swift in Sources */,
+				93DAC444209465C5003894D5 /* SignUpViewModel.swift in Sources */,
+				935989C92090A4FE00C2026D /* DateExtension.swift in Sources */,
+				9386184820A076FE00FBCD93 /* UIColorExtension.swift in Sources */,
+				9389CFB320B42F6F0015CD51 /* Coordinator.swift in Sources */,
+				93A820C320B692E300B79787 /* TodaySpendViewController.swift in Sources */,
+				93A820C720B6930700B79787 /* TodaySpendCoordinator.swift in Sources */,
+				93E49B2420BBE871009458BB /* AddSpendViewModel.swift in Sources */,
+				93D67A54208DF0DA00C4DCD8 /* SpendingsListViewController.swift in Sources */,
+				932BFCDC2090692E0033522C /* SpendingsSectionsHelper.swift in Sources */,
+				93D67A5A208DF26600C4DCD8 /* Spend.swift in Sources */,
+				9309E39A2093422E00DB273A /* SignInViewController.swift in Sources */,
+				93DAC442209465B0003894D5 /* SignUpViewController.swift in Sources */,
 				93417FB9208DCB59006014A0 /* StoryboardInitializable.swift in Sources */,
-				93417FCC208DE68F006014A0 /* RecipeTableViewCell.swift in Sources */,
+				93C4DC4920A179F60008513F /* UIViewExtension.swift in Sources */,
+				93C4DC4720A169F20008513F /* GradientView.swift in Sources */,
 				93417FBA208DCB59006014A0 /* BaseCoordinator.swift in Sources */,
-				93417FCB208DE68F006014A0 /* RecipeSearchViewModel.swift in Sources */,
+				93D67A58208DF10000C4DCD8 /* SpendingsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		935989D02091915B00C2026D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				935989CF2091915B00C2026D /* en */,
+				935989D12091915D00C2026D /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		9394996D206A75F4006D5D67 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9394996E206A75F4006D5D67 /* Base */,
+				935989CA209190C700C2026D /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -329,8 +514,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				93949973206A75F4006D5D67 /* Base */,
+				935989CB209190C800C2026D /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		93B7B65E20A3F88D0056C4FD /* Auth.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93B7B65D20A3F88D0056C4FD /* en */,
+				93B7B66020A3F88F0056C4FD /* ru */,
+			);
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -340,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -397,6 +593,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -448,12 +645,16 @@
 			baseConfigurationReference = AF7D706053ABB190998F1E33 /* Pods-FKipper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FKipper/FKipper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PCTL6TV7M;
 				INFOPLIST_FILE = FKipper/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ascherbinin.FKipper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FKipper/SupportingFiles/FKipper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,12 +665,15 @@
 			baseConfigurationReference = 90784703997F58CE36E42D32 /* Pods-FKipper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FKipper/FKipper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PCTL6TV7M;
 				INFOPLIST_FILE = FKipper/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ascherbinin.FKipper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FKipper/SupportingFiles/FKipper-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

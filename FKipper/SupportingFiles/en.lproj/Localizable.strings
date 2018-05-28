@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  FKipper
+
+  Created by Scherbinin Andrey on 26.04.2018.
+  Copyright © 2018 Scherbinin Andrey. All rights reserved.
+*/
+
+// View controllers titles
+
+"SpendingsTitle" = "Spends";
+"AuthTitle" = "Authorization";
+
+// Misk
+
+"Today" = "Today";
+"Yesterday" = "Yesterday";
+
+// Auth
+
+"Login" = "Login";
+"SignUp" = "Sign Up";
+"Cancel" = "Cancel";
+"NewAccountQuestion" = "Don't have an account? ";

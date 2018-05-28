@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "4gl-8Y-95w"; */
+"4gl-8Y-95w.text" = "Title";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "6R9-kB-qU4"; */
+"6R9-kB-qU4.text" = "Date";
+
+/* Class = "UIViewController"; title = "SpendingsViewController"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "SpendingsViewController";
+
+/* Class = "UILabel"; text = "Value"; ObjectID = "G9f-Y6-K0b"; */
+"G9f-Y6-K0b.text" = "Value";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "gLF-2p-nrJ"; */
+"gLF-2p-nrJ.text" = "Category";

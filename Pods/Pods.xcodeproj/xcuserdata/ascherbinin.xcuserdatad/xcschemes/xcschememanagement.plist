@@ -5,6 +5,7 @@
 	<key>SchemeUserState</key>
 	<dict>
 		<key>BoringSSL.xcscheme</key>
+<<<<<<< HEAD
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -20,13 +21,29 @@
 			<integer>8</integer>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
+=======
+>>>>>>> auth_feature_nonRx
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>Pods-FKipper.xcscheme</key>
+		<key>Differentiator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>GTMSessionFetcher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -43,6 +60,27 @@
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
+		<key>Pods-FKipper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>Protobuf.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>RxAnimated.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
 		<key>RxCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,6 +90,11 @@
 		</dict>
 		<key>RxDataSources.xcscheme</key>
 		<dict>
+<<<<<<< HEAD
+=======
+			<key>isShown</key>
+			<false/>
+>>>>>>> auth_feature_nonRx
 			<key>orderHint</key>
 			<integer>15</integer>
 		</dict>
@@ -71,31 +114,61 @@
 		</dict>
 		<key>gRPC-Core.xcscheme</key>
 		<dict>
+<<<<<<< HEAD
+=======
+			<key>isShown</key>
+			<false/>
+>>>>>>> auth_feature_nonRx
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
 		<key>gRPC-ProtoRPC.xcscheme</key>
 		<dict>
+<<<<<<< HEAD
+=======
+			<key>isShown</key>
+			<false/>
+>>>>>>> auth_feature_nonRx
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
 		<key>gRPC-RxLibrary.xcscheme</key>
 		<dict>
+<<<<<<< HEAD
+=======
+			<key>isShown</key>
+			<false/>
+>>>>>>> auth_feature_nonRx
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
 		<key>gRPC-gRPCCertificates.xcscheme</key>
 		<dict>
+<<<<<<< HEAD
+=======
+			<key>isShown</key>
+			<false/>
+>>>>>>> auth_feature_nonRx
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
 		<key>gRPC.xcscheme</key>
 		<dict>
+<<<<<<< HEAD
+=======
+			<key>isShown</key>
+			<false/>
+>>>>>>> auth_feature_nonRx
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
 		<key>leveldb-library.xcscheme</key>
 		<dict>
+<<<<<<< HEAD
+=======
+			<key>isShown</key>
+			<false/>
+>>>>>>> auth_feature_nonRx
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>

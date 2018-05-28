@@ -1,0 +1,6 @@
+module Toast_Swift [system] {
+  umbrella header "Toast-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
