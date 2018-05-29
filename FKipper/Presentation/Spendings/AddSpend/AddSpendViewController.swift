@@ -63,6 +63,7 @@ class AddSpendViewController: UIViewController, StoryboardInitializable  {
             .modelSelected(Category.self)
             .map{$0.first}
             .map{$0?.rawValue}
+            .startWith(pickerEntries.first?.rawValue)
             .bind(to: viewModel.categoryField)
             .disposed(by: disposeBag)
     }

@@ -148,25 +148,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Su-BB-v9w">
-                                        <rect key="frame" x="67" y="213" width="240" height="240"/>
+                                        <rect key="frame" x="60" y="206" width="255" height="255"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxl-Oj-76o">
-                                                <rect key="frame" x="65" y="96" width="111" height="48"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="52" y="99" width="151" height="58.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="50"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="RP6-Cd-RNS"/>
+                                            <constraint firstAttribute="width" constant="255" id="RP6-Cd-RNS"/>
                                             <constraint firstItem="Bxl-Oj-76o" firstAttribute="centerY" secondItem="6Su-BB-v9w" secondAttribute="centerY" id="h4S-nA-qAU"/>
                                             <constraint firstItem="Bxl-Oj-76o" firstAttribute="centerX" secondItem="6Su-BB-v9w" secondAttribute="centerX" id="p6k-QR-9fP"/>
-                                            <constraint firstAttribute="height" constant="240" id="uot-84-fv8"/>
+                                            <constraint firstAttribute="height" constant="255" id="uot-84-fv8"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="120"/>
+                                                <real key="value" value="127.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -189,6 +192,7 @@
                     </view>
                     <connections>
                         <outlet property="lblTotalSpend" destination="Bxl-Oj-76o" id="dQe-dA-ZvB"/>
+                        <outlet property="vwCircle" destination="6Su-BB-v9w" id="KrB-07-OMu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5j-s1-wdG" userLabel="First Responder" sceneMemberID="firstResponder"/>

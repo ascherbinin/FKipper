@@ -17,6 +17,7 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
     private var viewsIds: [Int] = []
 
     @IBOutlet weak var lblTotalSpend: UILabel!
+    @IBOutlet weak var vwCircle: UIView!
     
     private let exitButton = UIBarButtonItem(barButtonSystemItem: .action , target: nil, action: nil)
     
@@ -32,6 +33,8 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
         let rightButtons = [listButton, addButton]
 
         navigationItem.rightBarButtonItems = rightButtons
+        
+        vwCircle.layer.borderColor = UIColor.darkGray.cgColor
         
         viewModel
             .titleText
@@ -92,7 +95,7 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
             let angle = Double(index * 45)
             if !viewsIds.contains(where: { $0 == spend.category.hashValue}) {
                 let center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY)
-                let radius: Double = 115
+                let radius: Double = 95
                 let result = Measurement(value: angle, unit: UnitAngle.degrees)
                     .converted(to: .radians).value
                 let x: Double = Double(Double(center.x) + (radius * sin(result))) - 24
