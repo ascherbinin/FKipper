@@ -14,6 +14,7 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
     
     var viewModel: TodaySpendViewModelType!
     private let disposeBag = DisposeBag()
+    private var viewsIds: [Int] = []
 
     @IBOutlet weak var lblTotalSpend: UILabel!
     
@@ -66,7 +67,7 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
             .disposed(by: disposeBag)
         
         viewModel.todaySpends.bind { (spends) in
-            self.createCategoriesViews(todaySpends: spends)
+            self.drawCategoriesViews(todaySpends: spends)
         }.disposed(by: disposeBag)
         
         listButton.rx.tap
@@ -81,13 +82,25 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
         viewModel.startObserveQuery()
     }
     
-    fileprivate func createCategoriesViews(todaySpends: [Spend]) {
-        for spend in todaySpends {
-            let image = spend.category.image()
-            let imageView = UIImageView(frame: CGRect(x: Int(200 + arc4random_uniform(100)), y: Int(300 + arc4random_uniform(100)), width: 36, height: 36))
-            imageView.backgroundColor = UIColor.black
-            imageView.image = image
-            self.view.addSubview(imageView)
+    fileprivate func drawCategoriesViews(todaySpends: [Spend]) {
+//        let categoriesSpends = todaySpends.removingDuplicates()
+        let sorted = todaySpends.sorted { (sp1, sp2) -> Bool in
+            sp1.date > sp2.date
+        }
+        for (index, spend) in sorted.enumerated() {
+//            if !viewsIds.contains(where: { $0 == spend.category.hashValue}) {
+                let angle = Double(index * 35)
+                let center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY)
+                let radius: Double = 115
+                let result = Measurement(value: angle, unit: UnitAngle.degrees)
+                    .converted(to: .radians).value
+                let x: Double = Double(Double(center.x) + (radius * sin(result))) - 24
+                let y: Double = Double(Double(center.y) + (radius * cos(result))) - 24
+                let categoryView = CategoryView(frame: CGRect(x: x, y: y, width: 48.0, height: 48.0))
+                categoryView.setup(category: spend.category)
+                viewsIds.append(spend.category.hashValue)
+                self.view.addSubview(categoryView)
+//            }
         }
     }
 

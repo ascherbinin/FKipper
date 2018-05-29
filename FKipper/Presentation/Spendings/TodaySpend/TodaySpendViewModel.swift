@@ -51,6 +51,7 @@ class TodaySpendViewModel: TodaySpendViewModelType {
     let totalSpendToday = BehaviorRelay<Double>(value: 0.0)
     var todaySpends = BehaviorRelay<[Spend]>(value: [])
     
+    private var documents: [DocumentSnapshot] = []
     var coordinatorDelegate: TodaySpendViewModelCoordinatorDelegate!
 
     fileprivate var query: Query? {
@@ -82,6 +83,8 @@ class TodaySpendViewModel: TodaySpendViewModelType {
         self.userID = userID
         
         query = makeBaseQuery()
+        
+        
     }
     
     
@@ -108,32 +111,36 @@ class TodaySpendViewModel: TodaySpendViewModelType {
                 }
             }
             
-            let filteredModels = models.filter{ Calendar.current.isDateInToday($0.date)}
-            self.todaySpends.accept(filteredModels)
-            let totalSpends = filteredModels.reduce(0, { $0 + $1.costValue})
-            
-//            var sectionsDict: [String : SectionOfSpends] = [:]
-            
-//            // Need change sorted algorithm
-//            for element in models {
-//                let keyDate = element.date.toShortString()
-//                if sectionsDict.index(forKey:keyDate) == nil {
-//                    sectionsDict[keyDate] = SectionOfSpends(header: keyDate,
-//                                                            items: [SpendViewModel(spend: element)])
-//                }
-//                else {
-//                    sectionsDict[keyDate]?.items.append(SpendViewModel(spend: element))
-//                }
-//            }
-            
-//            let sortDict = sectionsDict.sorted(by: { (arg0, arg1) -> Bool in
-//                return arg0.key > arg1.key
-//            })
-            self.totalSpendToday.accept(totalSpends)
-            print(totalSpends)
-//            self.sections.value = sortDict.map{$0.1}
-//            self.documents = snapshot.documents
-//            self.showActivity.onNext(false)
+            if snapshot.documents != self.documents {
+                let filteredModels = models.filter{ Calendar.current.isDateInToday($0.date)}
+                self.todaySpends.accept(filteredModels)
+                let totalSpends = filteredModels.reduce(0, { $0 + $1.costValue})
+                
+                //            var sectionsDict: [String : SectionOfSpends] = [:]
+                
+                //            // Need change sorted algorithm
+                //            for element in models {
+                //                let keyDate = element.date.toShortString()
+                //                if sectionsDict.index(forKey:keyDate) == nil {
+                //                    sectionsDict[keyDate] = SectionOfSpends(header: keyDate,
+                //                                                            items: [SpendViewModel(spend: element)])
+                //                }
+                //                else {
+                //                    sectionsDict[keyDate]?.items.append(SpendViewModel(spend: element))
+                //                }
+                //            }
+                
+                //            let sortDict = sectionsDict.sorted(by: { (arg0, arg1) -> Bool in
+                //                return arg0.key > arg1.key
+                //            })
+                self.totalSpendToday.accept(totalSpends)
+                print(totalSpends)
+                //            self.sections.value = sortDict.map{$0.1}
+                //            self.documents = snapshot.documents
+                //            self.showActivity.onNext(false)
+                self.documents = snapshot.documents
+            }
+   
         }
     }
     

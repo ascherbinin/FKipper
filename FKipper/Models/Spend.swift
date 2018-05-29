@@ -64,6 +64,13 @@ extension Spend : DocumentSerializable {
     }
 }
 
+//extension Spend: Equatable {
+//    static func ==(lhs: Spend, rhs: Spend) -> Bool {
+//        let areEqual = lhs.category == rhs.category
+//        
+//        return areEqual
+//    }
+//}
 
 class SpendViewModel {
     let disposeBag = DisposeBag()
