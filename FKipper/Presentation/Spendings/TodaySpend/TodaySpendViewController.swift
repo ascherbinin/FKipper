@@ -63,6 +63,7 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
             .totalSpendToday
             .asObservable()
             .map{"\($0)"}
+            .distinctUntilChanged()
             .bind(animated: lblTotalSpend.rx.animated.tick(.top, duration: 0.33).text)
             .disposed(by: disposeBag)
         
@@ -88,8 +89,8 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
             sp1.date > sp2.date
         }
         for (index, spend) in sorted.enumerated() {
-//            if !viewsIds.contains(where: { $0 == spend.category.hashValue}) {
-                let angle = Double(index * 35)
+            let angle = Double(index * 45)
+            if !viewsIds.contains(where: { $0 == spend.category.hashValue}) {
                 let center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY)
                 let radius: Double = 115
                 let result = Measurement(value: angle, unit: UnitAngle.degrees)
@@ -100,7 +101,7 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
                 categoryView.setup(category: spend.category)
                 viewsIds.append(spend.category.hashValue)
                 self.view.addSubview(categoryView)
-//            }
+            }
         }
     }
 
