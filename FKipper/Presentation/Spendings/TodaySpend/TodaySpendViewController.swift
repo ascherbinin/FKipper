@@ -84,6 +84,13 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
         viewModel.startObserveQuery()
+        let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        rotateAnimation.fromValue = 0.0
+        rotateAnimation.toValue = CGFloat(Double.pi * 2)
+        rotateAnimation.isRemovedOnCompletion = false
+        rotateAnimation.duration = 10
+        rotateAnimation.repeatCount=Float.infinity
+        self.vwCircle.layer.add(rotateAnimation, forKey: nil)
     }
     
     fileprivate func drawCategoriesViews(todaySpends: [Spend]) {
@@ -94,7 +101,7 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
         for (index, spend) in sorted.enumerated() {
             let angle = Double(index * 45)
             if !viewsIds.contains(where: { $0 == spend.category.hashValue}) {
-                let center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY)
+                let center = CGPoint(x: vwCircle.frame.midX, y: vwCircle.frame.midY)
                 let radius: Double = 95
                 let result = Measurement(value: angle, unit: UnitAngle.degrees)
                     .converted(to: .radians).value
@@ -103,7 +110,7 @@ class TodaySpendViewController: UIViewController, StoryboardInitializable {
                 let categoryView = CategoryView(frame: CGRect(x: x, y: y, width: 48.0, height: 48.0))
                 categoryView.setup(category: spend.category)
                 viewsIds.append(spend.category.hashValue)
-                self.view.addSubview(categoryView)
+                vwCircle.addSubview(categoryView)
             }
         }
     }
