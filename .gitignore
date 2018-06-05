@@ -8,6 +8,9 @@
 .AppleDouble
 .LSOverride
 
+#GoogleAPIS
+GoogleService-Info.plist
+
 # Icon must end with two \r
 Icon
 
