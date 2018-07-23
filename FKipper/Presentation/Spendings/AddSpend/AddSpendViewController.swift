@@ -19,20 +19,12 @@ class AddSpendViewController: UIViewController, StoryboardInitializable  {
     @IBOutlet weak var pvCategory: UIPickerView!
     
     var viewModel: AddSpendViewModelType!
-    var pickerEntries: [Category] = []
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(
-            red: 0.8,
-            green: 0.6,
-            blue: 0.3,
-            alpha: 0.75)
-        
-        pickerEntries = Category.allValues
-
+        view.backgroundColor = UIColor.blue.withAlphaComponent(0.7)
         
         btnAdd.rx.tap.subscribe(onNext: {[weak self] in
             self?.addNewSpend()
@@ -53,17 +45,16 @@ class AddSpendViewController: UIViewController, StoryboardInitializable  {
         textFieldTitle.rx.text.orEmpty.bind(to: viewModel.titleField).disposed(by: disposeBag)
         textFieldValue.rx.text.orEmpty.bind(to: viewModel.valueField).disposed(by: disposeBag)
         
-        Observable.just(pickerEntries)
+        Observable.just(viewModel.categoryEntries)
             .bind(to: pvCategory.rx.itemTitles) { _, item in
-                return "\(item.rawValue)"
+                return "\(item.type.rawValue)"
             }
             .disposed(by: disposeBag)
         
         pvCategory.rx
             .modelSelected(Category.self)
             .map{$0.first}
-            .map{$0?.rawValue}
-            .startWith(pickerEntries.first?.rawValue)
+            .startWith(viewModel.categoryEntries.first)
             .bind(to: viewModel.categoryField)
             .disposed(by: disposeBag)
     }

@@ -50,6 +50,9 @@
 		93E49B2620BBE87D009458BB /* AddSpendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E49B2520BBE87D009458BB /* AddSpendViewController.swift */; };
 		93EC5D8920BC2014005D7A23 /* EnumExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EC5D8820BC2014005D7A23 /* EnumExtension.swift */; };
 		93EDCC54208DF82A0005D00F /* SpendingsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCC53208DF82A0005D00F /* SpendingsListTableViewCell.swift */; };
+		93F4155520FC5E83006BE1AC /* DynamicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4155420FC5E83006BE1AC /* DynamicView.swift */; };
+		93F4155720FC5EB8006BE1AC /* DynamicsViewsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4155620FC5EB8006BE1AC /* DynamicsViewsProtocol.swift */; };
+		93F4155920FC6D96006BE1AC /* ObservableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4155820FC6D96006BE1AC /* ObservableExtensions.swift */; };
 		FC17B25D73E2A2FC55F7CDC2 /* libPods-FKipper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D1F602D40D8885379EF95 /* libPods-FKipper.a */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +109,9 @@
 		93E49B2520BBE87D009458BB /* AddSpendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendViewController.swift; sourceTree = "<group>"; };
 		93EC5D8820BC2014005D7A23 /* EnumExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumExtension.swift; sourceTree = "<group>"; };
 		93EDCC53208DF82A0005D00F /* SpendingsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsListTableViewCell.swift; sourceTree = "<group>"; };
+		93F4155420FC5E83006BE1AC /* DynamicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicView.swift; sourceTree = "<group>"; };
+		93F4155620FC5EB8006BE1AC /* DynamicsViewsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsViewsProtocol.swift; sourceTree = "<group>"; };
+		93F4155820FC6D96006BE1AC /* ObservableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableExtensions.swift; sourceTree = "<group>"; };
 		AF7D706053ABB190998F1E33 /* Pods-FKipper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKipper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FKipper/Pods-FKipper.debug.xcconfig"; sourceTree = "<group>"; };
 		D69D1F602D40D8885379EF95 /* libPods-FKipper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FKipper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -238,6 +244,7 @@
 				93C4DC4820A179F60008513F /* UIViewExtension.swift */,
 				93EC5D8820BC2014005D7A23 /* EnumExtension.swift */,
 				933E4AB820BD4600001976AF /* ArrayExtension.swift */,
+				93F4155820FC6D96006BE1AC /* ObservableExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +270,7 @@
 		93949968206A75F4006D5D67 /* FKipper */ = {
 			isa = PBXGroup;
 			children = (
+				93F4155220FC5E63006BE1AC /* Components */,
 				93DAC44C20949493003894D5 /* FKipper.entitlements */,
 				935989C72090A4F100C2026D /* Extensions */,
 				932BFCDA209069150033522C /* Helpers */,
@@ -335,6 +343,23 @@
 				93E49B2520BBE87D009458BB /* AddSpendViewController.swift */,
 			);
 			path = AddSpend;
+			sourceTree = "<group>";
+		};
+		93F4155220FC5E63006BE1AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				93F4155320FC5E74006BE1AC /* DynamicView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		93F4155320FC5E74006BE1AC /* DynamicView */ = {
+			isa = PBXGroup;
+			children = (
+				93F4155420FC5E83006BE1AC /* DynamicView.swift */,
+				93F4155620FC5EB8006BE1AC /* DynamicsViewsProtocol.swift */,
+			);
+			path = DynamicView;
 			sourceTree = "<group>";
 		};
 		A4B4CD70ADA2828E78587246 /* Pods */ = {
@@ -475,6 +500,7 @@
 				939C2BDF20A0622E008C3134 /* UIButtonExtension.swift in Sources */,
 				93D67A5C208DF47200C4DCD8 /* LocalCollection.swift in Sources */,
 				93A820C520B692EE00B79787 /* TodaySpendViewModel.swift in Sources */,
+				93F4155520FC5E83006BE1AC /* DynamicView.swift in Sources */,
 				93EDCC54208DF82A0005D00F /* SpendingsListTableViewCell.swift in Sources */,
 				9394996A206A75F4006D5D67 /* AppDelegate.swift in Sources */,
 				93D67A56208DF0F600C4DCD8 /* SpendingsListCoordinator.swift in Sources */,
@@ -486,12 +512,14 @@
 				93DAC44820947A18003894D5 /* UUser.swift in Sources */,
 				93B7B66320A40A950056C4FD /* FlipPresentAnimationController.swift in Sources */,
 				93E49B2620BBE87D009458BB /* AddSpendViewController.swift in Sources */,
+				93F4155920FC6D96006BE1AC /* ObservableExtensions.swift in Sources */,
 				935989D32091921400C2026D /* NSLocalizedStringExtension.swift in Sources */,
 				93DAC444209465C5003894D5 /* SignUpViewModel.swift in Sources */,
 				935989C92090A4FE00C2026D /* DateExtension.swift in Sources */,
 				9386184820A076FE00FBCD93 /* UIColorExtension.swift in Sources */,
 				9389CFB320B42F6F0015CD51 /* Coordinator.swift in Sources */,
 				93A820C320B692E300B79787 /* TodaySpendViewController.swift in Sources */,
+				93F4155720FC5EB8006BE1AC /* DynamicsViewsProtocol.swift in Sources */,
 				93A820C720B6930700B79787 /* TodaySpendCoordinator.swift in Sources */,
 				93E49B2420BBE871009458BB /* AddSpendViewModel.swift in Sources */,
 				93D67A54208DF0DA00C4DCD8 /* SpendingsListViewController.swift in Sources */,

@@ -23,7 +23,7 @@ protocol TodaySpendViewModelType {
     var didTapOnList: Observable<Void> { get }
     
     var totalSpendToday: BehaviorRelay<Double> { get }
-    var todaySpends: BehaviorRelay<[Spend]> { get }
+    var todaySpends: BehaviorRelay<[Category]> { get }
     
     func startObserveQuery()
 }
@@ -49,7 +49,7 @@ class TodaySpendViewModel: TodaySpendViewModelType {
     let didTapOnAdd: Observable<Void>
     
     let totalSpendToday = BehaviorRelay<Double>(value: 0.0)
-    var todaySpends = BehaviorRelay<[Spend]>(value: [])
+    var todaySpends = BehaviorRelay<[Category]>(value: [])
     
     private var documents: [DocumentSnapshot] = []
     var coordinatorDelegate: TodaySpendViewModelCoordinatorDelegate!
@@ -87,8 +87,6 @@ class TodaySpendViewModel: TodaySpendViewModelType {
         
     }
     
-    
-    
     func startObserveQuery() {
         guard let query = query else { return }
         print("****IS HERE WITH ID: \(self.userID)")
@@ -113,7 +111,8 @@ class TodaySpendViewModel: TodaySpendViewModelType {
             
             if snapshot.documents != self.documents {
                 let filteredModels = models.filter{ Calendar.current.isDateInToday($0.date)}
-                self.todaySpends.accept(filteredModels)
+                let groupingModelsByCategory = Dictionary(grouping: filteredModels, by: { $0.category })
+                self.todaySpends.accept(Array(groupingModelsByCategory.keys))
                 let totalSpends = filteredModels.reduce(0, { $0 + $1.costValue})
                 
                 //            var sectionsDict: [String : SectionOfSpends] = [:]
@@ -149,6 +148,11 @@ class TodaySpendViewModel: TodaySpendViewModelType {
     }
     
     fileprivate func makeBaseQuery() -> Query {
-        return Firestore.firestore().collection("spends").document(self.userID).collection("entries")
+        let db = Firestore.firestore()
+        let settings = FirestoreSettings()
+        settings.isPersistenceEnabled = false
+        
+        db.settings = settings
+        return db.collection("spends").document(self.userID).collection("entries")
     }
 }

@@ -10,12 +10,46 @@ import Foundation
 import RxSwift
 import RxDataSources
 
-enum Category: String, EnumCollection {
+struct Category {
+    var type: CategoryType
+    var id: String
+    
+    init?(id: String) {
+        self.id = id
+        switch id {
+        case "0":
+            type = .Auto
+        case "1":
+            type = .Entertainment
+        case "2":
+            type = .Food
+        default:
+            return nil
+        }
+    }
+    
+    init?(type: CategoryType) {
+        self.type = type
+        switch type {
+        case CategoryType.Auto:
+            id = "0"
+        case CategoryType.Entertainment:
+            id = "1"
+        case CategoryType.Food:
+            id = "2"
+        default:
+            return nil
+        }
+    }
+}
+
+enum CategoryType: String, EnumCollection {
     case Auto
     case Entertainment
     case Food
+    case Other
     
-    func image() -> UIImage {
+    func image() -> UIImage? {
         switch self {
         case .Auto:
             return #imageLiteral(resourceName: "cat_auto")
@@ -23,11 +57,40 @@ enum Category: String, EnumCollection {
             return #imageLiteral(resourceName: "cat_entertainment")
         case .Food:
             return #imageLiteral(resourceName: "cat_food")
+        default :
+            return nil
         }
     }
-
+    
 }
 
+extension Category: Equatable {
+    static func == (lhs: Category, rhs: Category) -> Bool {
+        return lhs.type.rawValue == rhs.type.rawValue && lhs.id == rhs.id
+    }
+}
+
+extension Category: Hashable {
+    var hashValue: Int {
+        return id.hashValue
+    }
+}
+
+extension Category : DynamicEntryViewProtocol {
+    var title: String {
+        get {
+            return self.type.rawValue
+        }
+    }
+    
+    var image: UIImage? {
+        get {
+            return self.type.image()
+        }
+    }
+    
+    
+}
 
 
 struct Spend {
@@ -40,7 +103,7 @@ struct Spend {
     var dictionary: [String: Any] {
         return [
             "title": title,
-            "category": category.rawValue,
+            "categoryID": category.id,
             "costValue": costValue,
             "date": date
         ]
@@ -52,13 +115,13 @@ extension Spend : DocumentSerializable {
     
     init?(dictionary: [String : Any]) {
         guard let title = dictionary["title"] as? String,
-        let category = dictionary["category"] as? String,
+        let categoryID = dictionary["categoryID"] as? String,
         let costValue = dictionary["costValue"] as? Double,
         let date = dictionary["date"] as? Date else { return nil }
-        
-        guard let cat = Category(rawValue: category) else {
+        guard let cat = Category(id: categoryID) else {
             return nil
         }
+        
         self.init(title: title, category: cat,
                   costValue: costValue, date: date)
     }
@@ -76,7 +139,7 @@ class SpendViewModel {
     let disposeBag = DisposeBag()
     let spend: Spend
     var titleText: BehaviorSubject<String>
-    var categoryText: BehaviorSubject<String>
+    var category: BehaviorSubject<Category>
     var costValue: BehaviorSubject<Double>
     var date: BehaviorSubject<Date>
     
@@ -84,7 +147,7 @@ class SpendViewModel {
         self.spend = spend
         
         titleText = BehaviorSubject<String>(value: spend.title)
-        categoryText = BehaviorSubject<String>(value: spend.category.rawValue)
+        category = BehaviorSubject<Category>(value: spend.category)
         costValue = BehaviorSubject<Double>(value: spend.costValue)
         date = BehaviorSubject<Date>(value: spend.date)
     }

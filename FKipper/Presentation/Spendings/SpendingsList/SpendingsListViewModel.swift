@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import RxSwift
 import FirebaseFirestore
+import RxCocoa
 
 protocol SpendingsListViewModelCoordinatorDelegate {
     func cancel(from controller: UIViewController)
@@ -25,8 +26,9 @@ class SpendingsListViewModel {
     let selectSpend: AnyObserver<SpendViewModel>
     let showActivity = PublishSubject<Bool>()
     let title: Observable<String>
+    let selectedFilter = PublishSubject<Int>()
     
-    let sections = Variable<[SectionOfSpends]>([])
+    let sections = BehaviorRelay<[SectionOfSpends]>(value:[])
     private var documents: [DocumentSnapshot] = []
     var userID: String
     
@@ -41,7 +43,7 @@ class SpendingsListViewModel {
     
     private var listener: ListenerRegistration?
     
-    func startObserveQuery() {
+    func startObserveQuery(filterType: SectionType = .Day) {
         guard let query = query else { return }
         stopObserving()
         
@@ -66,19 +68,27 @@ class SpendingsListViewModel {
             
             // Need change sorted algorithm
             for element in models {
-                let keyDate = element.date.toShortString()
+                let keyDate: String
+                switch filterType {
+                case .Day:
+                    keyDate = element.date.toShortString()
+                case .Month:
+                    keyDate = element.date.toMonthString()
+                }
                 if sectionsDict.index(forKey:keyDate) == nil {
                     sectionsDict[keyDate] = SectionOfSpends(header: keyDate,
-                                                            items: [SpendViewModel(spend: element)])
+                                                            items: [SpendViewModel(spend: element)],
+                                                            type: filterType)
                 }
                 else {
                     sectionsDict[keyDate]?.items.append(SpendViewModel(spend: element))
                 }
             }
-            let sortDict = sectionsDict.sorted(by: { (arg0, arg1) -> Bool in
+            let sortSections = sectionsDict.sorted(by: { (arg0, arg1) -> Bool in
                 return arg0.key > arg1.key
-            })
-            self.sections.value = sortDict.map{$0.1}
+            }).map{$0.1}
+            
+            self.sections.accept(sortSections)
             self.documents = snapshot.documents
             self.showActivity.onNext(false)
         }
@@ -91,11 +101,17 @@ class SpendingsListViewModel {
     }
     
     fileprivate func baseQuery() -> Query {
-        return Firestore.firestore().collection("spends").document(self.userID).collection("entries")
+        
+        return Firestore.firestore()
+            .collection("spends")
+            .document(userID)
+            .collection("entries")
+            .order(by: "date", descending: true)
+        
     }
     
     init(title: String, userID: String) {
-
+        
         self.title = Observable.just(title)
         
         let _selectSpend = PublishSubject<SpendViewModel>()
@@ -108,8 +124,12 @@ class SpendingsListViewModel {
         
         self.userID = userID
         
-        query = baseQuery()
+        _ = selectedFilter.asObservable().subscribe(onNext: { [weak self] index in
+            let filter: SectionType = index == 0 ? .Day : .Month
+            self?.startObserveQuery(filterType: filter)
+        })
         
+        query = baseQuery()
     }
     
 }

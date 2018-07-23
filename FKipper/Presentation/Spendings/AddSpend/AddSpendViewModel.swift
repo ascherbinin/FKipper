@@ -23,8 +23,9 @@ protocol AddSpendViewModelType {
     var coordinatorDelegate: AddSpendViewModelCoordinatorDelegate! { get }
     
     var titleField: BehaviorRelay<String?> { get }
-    var categoryField: BehaviorRelay<String?> { get }
+    var categoryField: BehaviorRelay<Category?> { get }
     var valueField: BehaviorRelay<String?> { get }
+    var categoryEntries: [Category] { get }
 }
 
 class AddSpendViewModel: AddSpendViewModelType {
@@ -32,7 +33,7 @@ class AddSpendViewModel: AddSpendViewModelType {
     var coordinatorDelegate: AddSpendViewModelCoordinatorDelegate!
     
     let titleField = BehaviorRelay<String?>(value: nil)
-    let categoryField = BehaviorRelay<String?>(value: nil)
+    let categoryField = BehaviorRelay<Category?>(value: nil)
     let valueField = BehaviorRelay<String?>(value: nil)
     
     let db = Firestore.firestore()
@@ -43,6 +44,8 @@ class AddSpendViewModel: AddSpendViewModelType {
     // MARK: - Outputs
     let didSuccessAddSpend: Observable<Spend>
     
+    var categoryEntries: [Category] = []
+    
     init(for userID: String) {
         self.userID = userID
         
@@ -52,13 +55,15 @@ class AddSpendViewModel: AddSpendViewModelType {
         
         let _cancel = PublishSubject<Void>()
         self.cancel = _cancel.asObserver()
+
+        
+        categoryEntries = CategoryType.allValues.compactMap{Category(type: $0)}
     }
     
     
     func addNewSpand() {
         guard let title = titleField.value,
-            let cat = categoryField.value,
-            let category = Category(rawValue: cat),
+            let category = categoryField.value,
             let value = Double(valueField.value ?? "") else { return }
         let newSpend = Spend(title: title, category: category, costValue: value, date: Date())
         db.collection("spends").document(self.userID).collection("entries").document().setData(newSpend.dictionary)
