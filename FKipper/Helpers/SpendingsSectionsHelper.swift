@@ -9,9 +9,34 @@
 import Foundation
 import RxDataSources
 
+enum SectionType {
+    case Day
+    case Month
+}
+
 struct SectionOfSpends {
     var header: String
     var items: [SpendViewModel]
+    var type: SectionType
+    
+    func sectionHeader() -> String {
+        switch type {
+        case .Day:
+            switch header {
+            case Date().toShortString():
+                return "Today".localized()
+            case Date().dateBefore(byDays: 1):
+                return "Yesterday".localized()
+            default:
+                return header
+            }
+        case .Month:
+            return header
+        default:
+            return "WRONG TITLE"
+        }
+       
+    }
 }
 
 extension SectionOfSpends: AnimatableSectionModelType {

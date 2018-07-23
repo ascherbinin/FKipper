@@ -16,6 +16,7 @@ import Toast_Swift
 class SpendingsListViewController: UIViewController, StoryboardInitializable, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var viewModel: SpendingsListViewModel!
     private let disposeBag = DisposeBag()
@@ -28,7 +29,7 @@ class SpendingsListViewController: UIViewController, StoryboardInitializable, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         bindSpendsWithTableView()
-        
+        configureEvents()
        // navigationItem.leftBarButtonItem = exitButton
         
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -61,18 +62,23 @@ class SpendingsListViewController: UIViewController, StoryboardInitializable, UI
             }
         }).disposed(by: disposeBag)
 
-        exitButton.rx.tap.subscribe(onNext: { [weak self] _ in
-            guard let strongSelf = self else { return}
-            strongSelf.viewModel.coordinatorDelegate.cancel(from: strongSelf)
-        }).disposed(by: disposeBag)
-
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
         viewModel.startObserveQuery()
     }
+    
+    private func configureEvents() {
+        exitButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            guard let strongSelf = self else { return}
+            strongSelf.viewModel.coordinatorDelegate.cancel(from: strongSelf)
+        }).disposed(by: disposeBag)
+        
+        segmentedControl.rx.value.bind(to: viewModel.selectedFilter).disposed(by: disposeBag)
+    }
+
 
     private func bindSpendsWithTableView() {
         viewModel.sections.asObservable()
@@ -84,28 +90,21 @@ class SpendingsListViewController: UIViewController, StoryboardInitializable, UI
 extension SpendingsListViewController {
     static func dataSource() -> RxTableViewSectionedAnimatedDataSource<SectionOfSpends> {
         
-        func setupSectionHeader(_ header: String) -> String {
-            switch header {
-            case Date().toShortString():
-                return "Today".localized()
-            case Date().dateBefore(byDays: 1):
-                return "Yesterday".localized()
-            default:
-                return header
-            }
-        }
-        
+//        func setupSectionHeader(_ header: String) -> String {
+//
+//        }
+//
         return RxTableViewSectionedAnimatedDataSource(
-            animationConfiguration: AnimationConfiguration(insertAnimation: .middle,
-                                                           reloadAnimation: .none,
-                                                           deleteAnimation: .none),
+            animationConfiguration: AnimationConfiguration(insertAnimation: .fade,
+                                                           reloadAnimation: .fade,
+                                                           deleteAnimation: .fade),
             configureCell: { (dataSource, table, idxPath, item) in
                 let cell = table.dequeueReusableCell(withIdentifier: SpendingsListTableViewCell.reuseIdentificator, for: idxPath) as? SpendingsListTableViewCell
                  cell?.spendViewModel = item
                 return cell!
         },
             titleForHeaderInSection: { (ds, section) -> String? in
-                return setupSectionHeader(ds[section].header)
+                return ds[section].sectionHeader()
         }
         )
     }

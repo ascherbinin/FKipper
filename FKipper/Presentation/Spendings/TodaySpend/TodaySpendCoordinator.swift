@@ -21,7 +21,6 @@ class TodaySpendCoordinator: Coordinator {
     var userID: String
     var delegate: TodaySpendCoordinatorDelegate!
 
-    
     lazy var todaySpendViewModel: TodaySpendViewModel! = {
         let viewModel = TodaySpendViewModel("SignInTitle".localized(),
                                             userID: self.userID)

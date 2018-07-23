@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 import FirebaseFirestore
 
 protocol TodaySpendViewModelType {
@@ -21,7 +22,8 @@ protocol TodaySpendViewModelType {
     var tapOnList: AnyObserver<Void> { get }
     var didTapOnList: Observable<Void> { get }
     
-    var totalSpendToday: Variable<Double> { get }
+    var totalSpendToday: BehaviorRelay<Double> { get }
+    var todaySpends: BehaviorRelay<[Category]> { get }
     
     func startObserveQuery()
 }
@@ -46,8 +48,10 @@ class TodaySpendViewModel: TodaySpendViewModelType {
     let tapOnAdd: AnyObserver<Void>
     let didTapOnAdd: Observable<Void>
     
-    let totalSpendToday = Variable<Double>(0.0)
+    let totalSpendToday = BehaviorRelay<Double>(value: 0.0)
+    var todaySpends = BehaviorRelay<[Category]>(value: [])
     
+    private var documents: [DocumentSnapshot] = []
     var coordinatorDelegate: TodaySpendViewModelCoordinatorDelegate!
 
     fileprivate var query: Query? {
@@ -79,9 +83,9 @@ class TodaySpendViewModel: TodaySpendViewModelType {
         self.userID = userID
         
         query = makeBaseQuery()
+        
+        
     }
-    
-    
     
     func startObserveQuery() {
         guard let query = query else { return }
@@ -105,31 +109,37 @@ class TodaySpendViewModel: TodaySpendViewModelType {
                 }
             }
             
-            let filteredModels = models.filter{ Calendar.current.isDateInToday($0.date)}
-            let totalSpends = filteredModels.reduce(0, { $0 + $1.costValue})
-            
-//            var sectionsDict: [String : SectionOfSpends] = [:]
-            
-//            // Need change sorted algorithm
-//            for element in models {
-//                let keyDate = element.date.toShortString()
-//                if sectionsDict.index(forKey:keyDate) == nil {
-//                    sectionsDict[keyDate] = SectionOfSpends(header: keyDate,
-//                                                            items: [SpendViewModel(spend: element)])
-//                }
-//                else {
-//                    sectionsDict[keyDate]?.items.append(SpendViewModel(spend: element))
-//                }
-//            }
-            
-//            let sortDict = sectionsDict.sorted(by: { (arg0, arg1) -> Bool in
-//                return arg0.key > arg1.key
-//            })
-            self.totalSpendToday.value = totalSpends
-            print(totalSpends)
-//            self.sections.value = sortDict.map{$0.1}
-//            self.documents = snapshot.documents
-//            self.showActivity.onNext(false)
+            if snapshot.documents != self.documents {
+                let filteredModels = models.filter{ Calendar.current.isDateInToday($0.date)}
+                let groupingModelsByCategory = Dictionary(grouping: filteredModels, by: { $0.category })
+                self.todaySpends.accept(Array(groupingModelsByCategory.keys))
+                let totalSpends = filteredModels.reduce(0, { $0 + $1.costValue})
+                
+                //            var sectionsDict: [String : SectionOfSpends] = [:]
+                
+                //            // Need change sorted algorithm
+                //            for element in models {
+                //                let keyDate = element.date.toShortString()
+                //                if sectionsDict.index(forKey:keyDate) == nil {
+                //                    sectionsDict[keyDate] = SectionOfSpends(header: keyDate,
+                //                                                            items: [SpendViewModel(spend: element)])
+                //                }
+                //                else {
+                //                    sectionsDict[keyDate]?.items.append(SpendViewModel(spend: element))
+                //                }
+                //            }
+                
+                //            let sortDict = sectionsDict.sorted(by: { (arg0, arg1) -> Bool in
+                //                return arg0.key > arg1.key
+                //            })
+                self.totalSpendToday.accept(totalSpends)
+                print(totalSpends)
+                //            self.sections.value = sortDict.map{$0.1}
+                //            self.documents = snapshot.documents
+                //            self.showActivity.onNext(false)
+                self.documents = snapshot.documents
+            }
+   
         }
     }
     
@@ -138,7 +148,11 @@ class TodaySpendViewModel: TodaySpendViewModelType {
     }
     
     fileprivate func makeBaseQuery() -> Query {
-        return Firestore.firestore().collection("spends").document(self.userID).collection("entries")
+        let db = Firestore.firestore()
+        let settings = FirestoreSettings()
+        settings.isPersistenceEnabled = false
+        
+        db.settings = settings
+        return db.collection("spends").document(self.userID).collection("entries")
     }
-
 }

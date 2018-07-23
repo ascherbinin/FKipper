@@ -9,14 +9,14 @@
 import Foundation
 import RxSwift
 
-class AddSpendViewController: UIViewController, StoryboardInitializable {
+class AddSpendViewController: UIViewController, StoryboardInitializable  {
 
     @IBOutlet weak var btnAdd: UIButton!
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var textFieldTitle: UITextField!
-    @IBOutlet weak var textFieldCategory: UITextField!
     @IBOutlet weak var textFieldValue: UITextField!
-
+    
+    @IBOutlet weak var pvCategory: UIPickerView!
     
     var viewModel: AddSpendViewModelType!
     private let disposeBag = DisposeBag()
@@ -24,11 +24,7 @@ class AddSpendViewController: UIViewController, StoryboardInitializable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(
-            red: 0.8,
-            green: 0.6,
-            blue: 0.3,
-            alpha: 0.75)
+        view.backgroundColor = UIColor.blue.withAlphaComponent(0.7)
         
         btnAdd.rx.tap.subscribe(onNext: {[weak self] in
             self?.addNewSpend()
@@ -48,7 +44,19 @@ class AddSpendViewController: UIViewController, StoryboardInitializable {
         
         textFieldTitle.rx.text.orEmpty.bind(to: viewModel.titleField).disposed(by: disposeBag)
         textFieldValue.rx.text.orEmpty.bind(to: viewModel.valueField).disposed(by: disposeBag)
-        textFieldCategory.rx.text.orEmpty.bind(to: viewModel.categoryField).disposed(by: disposeBag)
+        
+        Observable.just(viewModel.categoryEntries)
+            .bind(to: pvCategory.rx.itemTitles) { _, item in
+                return "\(item.type.rawValue)"
+            }
+            .disposed(by: disposeBag)
+        
+        pvCategory.rx
+            .modelSelected(Category.self)
+            .map{$0.first}
+            .startWith(viewModel.categoryEntries.first)
+            .bind(to: viewModel.categoryField)
+            .disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,3 +68,22 @@ class AddSpendViewController: UIViewController, StoryboardInitializable {
         viewModel.addNewSpand()
     }
 }
+
+//extension AddSpendViewController: UIPickerViewDelegate {
+//
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return pickerEntries[row]
+//    }
+//}
+//
+//extension AddSpendViewController: UIPickerViewDataSource {
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return 1
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return pickerEntries.count
+//    }
+//
+//
+//}
